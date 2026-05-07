@@ -56,23 +56,16 @@ Agrupar en lotes de 5 si el portfolio supera esa cantidad.
 🔴 Crítico:     Score < 75, errores bloqueantes, múltiples KPIs rojos
 ```
 
-## Portfolio actual — cuentas activas con MCP
+## Portfolio actual — clientes activos
 
-| Cliente | Account ID | Moneda | Vertical |
-|---------|-----------|--------|---------|
-| Cupra USD | 2734330683439155 | USD | Wine & Spirits |
-| Tradition & Rebellion | 1255958546224523 | USD | Restaurant/Bar |
-| Dra. Maria Eugenia Buonsante | 1238818623235612 | ARS | MedSpa / Salud |
-| LP - La PLAYA 2023 | 1425628214343986 | — | — |
-| Sarapura | 852858213205966 | — | — |
-| Darwin Buen Ayre | 1311426056636753 | — | — |
-| Darwin SI - Pesos | 26730211493278328 | — | — |
-| Javier Nutrición | 219433399508952 | — | — |
-| Javier Rodriguez JRN 2025 | 1067365748751452 | — | — |
-| Dra. Barbara Villanustre | 571264391657764 | — | — |
-| Dr. Fernando Martin | 368020019406638 | — | — |
-| Skintegrity | 842960848330387 | — | — |
-| Prueba JRN | 1566431454395784 | — | — |
+| Cliente | Account ID | Moneda | MCP | Vertical |
+|---------|-----------|--------|-----|---------|
+| Dra. Maria Eugenia Buonsante | 1238818623235612 | ARS | ✅ | MedSpa / Salud estética |
+| Sorace Mendoza | 905876964450782 | — | ❌ | — |
+| Javier Rodriguez (Nutrición) | 219433399508952 | ARS | ✅ | Nutrición |
+| Javier Rodriguez JRN 2025 | 1067365748751452 | ARS | ✅ | Nutrición |
+| Tradition & Rebellion | 1255958546224523 | USD | ✅ | Restaurant / Bar |
+| Presidente Bar | 803670943793654 | — | ❌ | Bar / Gastronomía |
 
 ## Formato de reporte ejecutivo
 

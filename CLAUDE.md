@@ -50,12 +50,19 @@ python agents/budget_optimizer.py --account <ID> --budget 5000 --objective ROAS
 
 ## Clientes activos
 
-- **Cupra Wines** — Campañas en Instagram, Facebook, Google, YouTube, Email
+| Cliente | Account ID | Moneda | MCP | Vertical |
+|---------|-----------|--------|-----|---------|
+| Dra. Maria Eugenia Buonsante | 1238818623235612 | ARS | ✅ | MedSpa / Salud estética |
+| Sorace Mendoza | 905876964450782 | — | ❌ | — |
+| Javier Rodriguez (Nutrición) | 219433399508952 | — | ✅ | Nutrición |
+| Javier Rodriguez JRN 2025 | 1067365748751452 | — | ✅ | Nutrición |
+| Tradition & Rebellion | 1255958546224523 | USD | ✅ | Restaurant / Bar |
+| Presidente Bar | 803670943793654 | — | ❌ | Bar / Gastronomía |
 
 ## Convenciones
 
-- Moneda por defecto: EUR
-- Zona horaria: Europe/Madrid
+- Moneda por defecto: ARS (Argentina) / USD según cliente
+- Zona horaria: America/Argentina/Buenos_Aires
 - Periodos estándar: `last-7-days`, `last-30-days`, `last-60-days`, `last-90-days`
 - Atribución: 7-day click, 1-day view (Meta estándar)
 
