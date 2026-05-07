@@ -58,3 +58,37 @@ python agents/budget_optimizer.py --account <ID> --budget 5000 --objective ROAS
 - Zona horaria: Europe/Madrid
 - Periodos estándar: `last-7-days`, `last-30-days`, `last-60-days`, `last-90-days`
 - Atribución: 7-day click, 1-day view (Meta estándar)
+
+---
+
+## Context Engineering — Workflow de implementación
+
+### Comandos disponibles
+
+| Comando | Qué hace |
+|---------|----------|
+| `/generate-prp INITIAL.md` | Investiga el codebase y genera un PRP completo para la feature |
+| `/execute-prp PRPs/nombre.md` | Implementa la feature siguiendo el blueprint del PRP |
+
+### Flujo recomendado para nuevas features
+
+1. **Describí la feature** en `INITIAL.md` (ya existe como template)
+2. **Generá el PRP** con `/generate-prp INITIAL.md` → se guarda en `PRPs/`
+3. **Ejecutá el PRP** con `/execute-prp PRPs/nombre.md`
+
+### Estructura de PRPs
+
+```
+PRPs/
+├── templates/
+│   └── prp_base.md          # Template base para nuevos PRPs
+└── {feature-name}.md        # PRPs generados
+```
+
+### Reglas de código (Context Engineering)
+
+- Nunca crear archivos de más de 500 líneas — refactorizar en módulos si es necesario
+- Siempre crear tests unitarios para nuevas features
+- Usar `python-dotenv` para variables de entorno
+- Type hints en todo el código Python
+- Nunca asumir contexto faltante — preguntar si hay dudas
