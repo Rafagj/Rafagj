@@ -1,0 +1,139 @@
+{
+  "_comment": "Blueprint Make.com para el agente Sarapura. Importar en Make > Scenarios > Import Blueprint.",
+  "_instructions": "Reemplazar AGENT_URL con la URL pública de tu servidor (Railway/Render) y MAKE_SECRET con el token secreto compartido.",
+  "scenarios": [
+    {
+      "name": "Sarapura — DM Instagram → Agente",
+      "description": "Cuando llega un mensaje directo a Instagram de Sarapura, lo reenvía al agente Python para que Claude responda automáticamente.",
+      "trigger": {
+        "app": "instagram-business",
+        "module": "Watch Direct Messages",
+        "config": {
+          "page_id": "{{SARAPURA_IG_PAGE_ID}}",
+          "fields": ["sender_id", "sender_name", "message_text", "conversation_id"]
+        }
+      },
+      "steps": [
+        {
+          "app": "http",
+          "module": "Make a Request",
+          "config": {
+            "url": "{{AGENT_URL}}/ig/dm",
+            "method": "POST",
+            "headers": [
+              {"name": "X-Make-Secret", "value": "{{MAKE_SECRET}}"},
+              {"name": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "sender_id": "{{trigger.sender_id}}",
+              "sender_name": "{{trigger.sender_name}}",
+              "message_text": "{{trigger.message_text}}",
+              "conversation_id": "{{trigger.conversation_id}}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sarapura — Comentarios Instagram → Agente",
+      "description": "Cuando alguien comenta en una publicación de Sarapura, el agente genera y publica una respuesta.",
+      "trigger": {
+        "app": "instagram-business",
+        "module": "Watch Comments",
+        "config": {
+          "page_id": "{{SARAPURA_IG_PAGE_ID}}",
+          "fields": ["commenter_name", "comment_id", "comment_text", "media_id"]
+        }
+      },
+      "steps": [
+        {
+          "app": "http",
+          "module": "Make a Request",
+          "config": {
+            "url": "{{AGENT_URL}}/ig/comment",
+            "method": "POST",
+            "headers": [
+              {"name": "X-Make-Secret", "value": "{{MAKE_SECRET}}"},
+              {"name": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "commenter_name": "{{trigger.commenter_name}}",
+              "comment_id": "{{trigger.comment_id}}",
+              "comment_text": "{{trigger.comment_text}}",
+              "media_id": "{{trigger.media_id}}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sarapura — Menciones en Stories → Aprobación",
+      "description": "Cuando Sarapura es mencionado en una story, analiza el sentimiento y si es positivo envía al admin por WhatsApp para aprobar el reposteo.",
+      "trigger": {
+        "app": "instagram-business",
+        "module": "Watch Mentions",
+        "config": {
+          "page_id": "{{SARAPURA_IG_PAGE_ID}}",
+          "fields": ["mention_id", "username", "story_text", "media_url"]
+        }
+      },
+      "steps": [
+        {
+          "app": "http",
+          "module": "Make a Request",
+          "config": {
+            "url": "{{AGENT_URL}}/ig/mention",
+            "method": "POST",
+            "headers": [
+              {"name": "X-Make-Secret", "value": "{{MAKE_SECRET}}"},
+              {"name": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mention_id": "{{trigger.mention_id}}",
+              "username": "{{trigger.username}}",
+              "story_text": "{{trigger.story_text}}",
+              "media_url": "{{trigger.media_url}}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sarapura — Respuesta admin WhatsApp → Reposteo",
+      "description": "Cuando el admin responde SI o NO a la notificación de WhatsApp, procesa la aprobación y repostea (o descarta) la story.",
+      "trigger": {
+        "app": "whatsapp-business",
+        "module": "Watch Messages",
+        "config": {
+          "phone_number_id": "{{SARAPURA_WA_PHONE_NUMBER_ID}}",
+          "filter_from": "{{SARAPURA_ADMIN_PHONE}}"
+        }
+      },
+      "steps": [
+        {
+          "app": "http",
+          "module": "Make a Request",
+          "config": {
+            "url": "{{AGENT_URL}}/wa/approval",
+            "method": "POST",
+            "headers": [
+              {"name": "X-Make-Secret", "value": "{{MAKE_SECRET}}"},
+              {"name": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "from_phone": "{{trigger.from}}",
+              "message_text": "{{trigger.text.body}}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "AGENT_URL": "https://TU-SERVIDOR.railway.app",
+    "MAKE_SECRET": "token-secreto-compartido",
+    "SARAPURA_IG_PAGE_ID": "ID-de-la-pagina-de-sarapura",
+    "SARAPURA_WA_PHONE_NUMBER_ID": "ID-del-numero-whatsapp",
+    "SARAPURA_ADMIN_PHONE": "549XXXXXXXXXX"
+  }
+}
