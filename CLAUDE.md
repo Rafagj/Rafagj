@@ -58,6 +58,7 @@ python agents/budget_optimizer.py --account <ID> --budget 5000 --objective ROAS
 | Javier Rodriguez JRN 2025 | 1067365748751452 | — | ✅ | Nutrición |
 | Tradition & Rebellion | 1255958546224523 | USD | ✅ | Restaurant / Bar |
 | Presidente Bar | 803670943793654 | — | ❌ | Bar / Gastronomía |
+| Sarapura | 852858213205966 | ARS | ✅ | — |
 
 ## Convenciones
 

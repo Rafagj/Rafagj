@@ -66,6 +66,7 @@ Agrupar en lotes de 5 si el portfolio supera esa cantidad.
 | Javier Rodriguez JRN 2025 | 1067365748751452 | ARS | ✅ | Nutrición |
 | Tradition & Rebellion | 1255958546224523 | USD | ✅ | Restaurant / Bar |
 | Presidente Bar | 803670943793654 | — | ❌ | Bar / Gastronomía |
+| Sarapura | 852858213205966 | ARS | ✅ | — |
 
 ## Formato de reporte ejecutivo
 
