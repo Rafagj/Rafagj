@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RGJ — Estudio profesional integral. Asesoramiento jurídico, contable y de negocios en Argentina. Soluciones a la medida de tu empresa." />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta property="og:title" content="RGJ — Estudio profesional integral" />
+  <meta property="og:description" content="Asesoramiento jurídico, contable y estratégico para empresas y particulares." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <title>RGJ — Estudio profesional integral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FF4D2E'/%3E%3Ctext x='50' y='66' font-family='Arial Black,sans-serif' font-size='52' font-weight='900' text-anchor='middle' fill='%23fff'%3ER%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- Marquee superior -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Asesoramiento jurídico</span><span aria-hidden="true">★</span>
+      <span>Consultoría contable</span><span aria-hidden="true">★</span>
+      <span>Estrategia empresarial</span><span aria-hidden="true">★</span>
+      <span>Compliance &amp; gobernanza</span><span aria-hidden="true">★</span>
+      <span>Asesoramiento jurídico</span><span aria-hidden="true">★</span>
+      <span>Consultoría contable</span><span aria-hidden="true">★</span>
+      <span>Estrategia empresarial</span><span aria-hidden="true">★</span>
+      <span>Compliance &amp; gobernanza</span><span aria-hidden="true">★</span>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header" id="top">
+    <a href="#top" class="logo" aria-label="RGJ — Inicio">
+      <span class="logo__mark">R<em>•</em>G<em>•</em>J</span>
+      <span class="logo__sub">Estudio</span>
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a href="#contacto" class="btn btn--pill btn--accent nav__cta">
+      <span>Hablemos</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="btn btn--pill btn--accent">Hablemos →</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="blob blob--3"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow">
+          <span class="dot"></span>
+          Estudio profesional · Buenos Aires, Argentina
+        </p>
+
+        <h1 class="hero__title">
+          Soluciones <em class="hl hl--orange">audaces</em>
+          para decisiones <em class="hl hl--blue">complejas</em>.
+        </h1>
+
+        <p class="hero__lead">
+          Somos un estudio interdisciplinario que combina derecho, contabilidad y estrategia para
+          que tu empresa avance con claridad, seguridad y velocidad.
+        </p>
+
+        <div class="hero__ctas">
+          <a href="#contacto" class="btn btn--primary">
+            Agendar consulta
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+        </div>
+
+        <ul class="hero__stats" aria-label="Indicadores del estudio">
+          <li>
+            <strong>+15</strong>
+            <span>años de experiencia</span>
+          </li>
+          <li>
+            <strong>+200</strong>
+            <span>clientes activos</span>
+          </li>
+          <li>
+            <strong>4</strong>
+            <span>áreas de práctica</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="spin-slow">
+          <defs>
+            <path id="circ" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+          </defs>
+          <text font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="currentColor">
+            <textPath href="#circ">RGJ · ESTUDIO · DESDE 2009 · RGJ · ESTUDIO · DESDE 2009 · </textPath>
+          </text>
+        </svg>
+        <span class="hero__badge-arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section section--about" id="sobre">
+      <div class="section__head">
+        <span class="section__num">01 —</span>
+        <h2 class="section__title">
+          Un estudio que <em class="hl hl--blue">piensa</em> distinto
+          y <em class="hl hl--orange">ejecuta</em> con precisión.
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            En <strong>RGJ</strong> creemos que la mejor asesoría es la que
+            <strong>simplifica</strong>. Hace más de quince años acompañamos a empresas,
+            emprendedores y particulares a tomar decisiones complejas con información clara
+            y soluciones implementables.
+          </p>
+          <p>
+            Trabajamos a la medida de cada cliente, integrando equipos de derecho,
+            contabilidad y estrategia para resolver problemas reales — no solo redactar
+            dictámenes.
+          </p>
+
+          <ul class="bullets">
+            <li><span>✦</span> Equipo interdisciplinario</li>
+            <li><span>✦</span> Honorarios transparentes</li>
+            <li><span>✦</span> Atención directa con socios</li>
+            <li><span>✦</span> Respuesta en 24 hs</li>
+          </ul>
+        </div>
+
+        <aside class="about-card">
+          <p class="about-card__quote">
+            “No vendemos horas: vendemos decisiones bien tomadas.”
+          </p>
+          <div class="about-card__author">
+            <div class="avatar">RG</div>
+            <div>
+              <strong>Rafael G. — Socio fundador</strong>
+              <span>15+ años en derecho corporativo</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section section--services" id="servicios">
+      <div class="section__head">
+        <span class="section__num">02 —</span>
+        <h2 class="section__title">
+          Servicios que <em class="hl hl--orange">resuelven</em>,
+          no que solo <em class="hl hl--blue">describen</em>.
+        </h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card" tabindex="0" style="--card-color: #FF4D2E">
+          <div class="service-card__num">①</div>
+          <h3>Derecho Corporativo</h3>
+          <p>Sociedades, contratos, M&amp;A, gobierno corporativo y resolución de conflictos comerciales.</p>
+          <ul>
+            <li>Constitución y reorganización societaria</li>
+            <li>Due diligence y compraventa de empresas</li>
+            <li>Contratos comerciales y SLA</li>
+          </ul>
+          <span class="service-card__more">Conocer más →</span>
+        </article>
+
+        <article class="service-card" tabindex="0" style="--card-color: #1E40FF">
+          <div class="service-card__num">②</div>
+          <h3>Contabilidad &amp; Tributario</h3>
+          <p>Planificación fiscal, cumplimiento impositivo y auditoría para PyMEs y empresas familiares.</p>
+          <ul>
+            <li>Liquidación de impuestos nacionales y provinciales</li>
+            <li>Planificación tributaria internacional</li>
+            <li>Estados contables y reportes</li>
+          </ul>
+          <span class="service-card__more">Conocer más →</span>
+        </article>
+
+        <article class="service-card" tabindex="0" style="--card-color: #FFD60A">
+          <div class="service-card__num">③</div>
+          <h3>Estrategia &amp; Negocios</h3>
+          <p>Acompañamiento integral para escalar, levantar capital o profesionalizar la operación.</p>
+          <ul>
+            <li>Modelado financiero y proyecciones</li>
+            <li>Búsqueda de financiamiento y rondas</li>
+            <li>Gobernanza y board advisory</li>
+          </ul>
+          <span class="service-card__more">Conocer más →</span>
+        </article>
+
+        <article class="service-card" tabindex="0" style="--card-color: #06B6D4">
+          <div class="service-card__num">④</div>
+          <h3>Compliance &amp; Datos</h3>
+          <p>Programas de integridad, protección de datos personales y prevención de lavado de activos.</p>
+          <ul>
+            <li>Programas de integridad (Ley 27.401)</li>
+            <li>Adecuación a Ley de Protección de Datos</li>
+            <li>Capacitación a directorios</li>
+          </ul>
+          <span class="service-card__more">Conocer más →</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section section--process" id="proceso">
+      <div class="section__head">
+        <span class="section__num">03 —</span>
+        <h2 class="section__title">
+          Cómo <em class="hl hl--orange">trabajamos</em> con vos.
+        </h2>
+      </div>
+
+      <ol class="process">
+        <li>
+          <span class="process__num">01</span>
+          <h3>Diagnóstico</h3>
+          <p>Escuchamos, mapeamos el problema real y definimos objetivos medibles. Sin reuniones eternas.</p>
+        </li>
+        <li>
+          <span class="process__num">02</span>
+          <h3>Propuesta</h3>
+          <p>Plan de trabajo con alcance, plazos y honorarios cerrados. Vos decidís con toda la información.</p>
+        </li>
+        <li>
+          <span class="process__num">03</span>
+          <h3>Ejecución</h3>
+          <p>Equipo dedicado, un punto de contacto y reportes claros. Cumplimos lo que firmamos.</p>
+        </li>
+        <li>
+          <span class="process__num">04</span>
+          <h3>Seguimiento</h3>
+          <p>No desaparecemos al cerrar. Acompañamos resultados, ajustamos y crecemos juntos.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CTA banner -->
+    <section class="cta-banner">
+      <h2>¿Tenés un caso complejo? <em class="hl hl--orange">Empecemos hoy.</em></h2>
+      <a href="#contacto" class="btn btn--primary btn--lg">
+        Agendar consulta gratuita
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section section--contact" id="contacto">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section__num">04 —</span>
+          <h2 class="section__title">
+            Hablemos.<br>
+            <em class="hl hl--blue">Sin compromiso.</em>
+          </h2>
+          <p class="contact-info__lead">
+            Contanos brevemente tu situación. Respondemos en menos de 24 horas hábiles.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-list__label">Email</span>
+              <a href="mailto:contacto@rgj.com.ar">contacto@rgj.com.ar</a>
+            </li>
+            <li>
+              <span class="contact-list__label">Teléfono</span>
+              <a href="tel:+541140000000">+54 11 4000-0000</a>
+            </li>
+            <li>
+              <span class="contact-list__label">Oficina</span>
+              <span>Av. Corrientes 1234, piso 8 · CABA, Argentina</span>
+            </li>
+            <li>
+              <span class="contact-list__label">Horario</span>
+              <span>Lun a Vie · 9 a 18 hs</span>
+            </li>
+          </ul>
+
+          <div class="socials">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="WhatsApp">wa</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Ej: María Pérez" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="vos@email.com" />
+          </div>
+          <div class="field">
+            <label for="tema">¿Sobre qué necesitás asesoramiento?</label>
+            <select id="tema" name="tema" required>
+              <option value="">Elegí un área...</option>
+              <option>Derecho Corporativo</option>
+              <option>Contabilidad &amp; Tributario</option>
+              <option>Estrategia &amp; Negocios</option>
+              <option>Compliance &amp; Datos</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensaje">Contanos brevemente</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Una descripción corta de tu consulta..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">
+            Enviar consulta
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="logo logo--footer">
+        <span class="logo__mark">R<em>•</em>G<em>•</em>J</span>
+        <span class="logo__sub">Estudio profesional integral</span>
+      </div>
+      <p class="site-footer__claim">
+        Decisiones bien tomadas.<br>Resultados medibles.
+      </p>
+    </div>
+    <div class="site-footer__bottom">
+      <small>© <span id="year"></span> RGJ Estudio · Todos los derechos reservados.</small>
+      <small>Hecho con <span aria-hidden="true">✦</span> en Buenos Aires</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
