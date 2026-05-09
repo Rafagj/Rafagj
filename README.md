@@ -1,6 +1,10 @@
-# RGJ — Estudio profesional integral
+# Rafa García Juanicó — Estudio profesional
 
-Sitio web estático para **RGJ Estudio**, un estudio interdisciplinario (jurídico, contable y de negocios) en Argentina.
+Sitio web estático para **Rafa García Juanicó**, estudio profesional unipersonal en Argentina.
+
+- WhatsApp: [+54 9 11 4192-7700](https://wa.me/5491141927700)
+- Email: [hola@rgj.com.ar](mailto:hola@rgj.com.ar)
+- Instagram: [@rafagj](https://instagram.com/rafagj)
 
 ## Stack
 
