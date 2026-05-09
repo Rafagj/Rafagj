@@ -462,6 +462,59 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
+/* Layout especial para 5 servicios: 1 destacado + 4 en grilla */
+.services-grid--five {
+  grid-template-columns: repeat(6, 1fr);
+}
+.services-grid--five .service-card { grid-column: span 3; }
+.services-grid--five .service-card--feature {
+  grid-column: span 6;
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.services-grid--five .service-card--feature h3 { font-size: clamp(2rem, 4vw, 3rem); }
+.services-grid--five .service-card--feature p { color: rgba(250, 250, 247, .82); font-size: 1.05rem; max-width: 720px; }
+.services-grid--five .service-card--feature ul { color: rgba(250, 250, 247, .65); }
+.services-grid--five .service-card--feature .service-card__num { font-size: 3.5rem; }
+.services-grid--five .service-card--feature .service-card__more { color: var(--bg); }
+.services-grid--five .service-card--feature a { color: var(--orange); }
+.services-grid--five .service-card--feature:hover,
+.services-grid--five .service-card--feature:focus-visible {
+  background: var(--ink);
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+@media (min-width: 1100px) {
+  .services-grid--five { grid-template-columns: repeat(4, 1fr); }
+  .services-grid--five .service-card { grid-column: span 1; }
+  .services-grid--five .service-card--feature { grid-column: span 4; }
+}
+@media (max-width: 760px) {
+  .services-grid--five { grid-template-columns: 1fr; }
+  .services-grid--five .service-card,
+  .services-grid--five .service-card--feature { grid-column: 1; }
+}
+
+.service-card__tag {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--card-color);
+  padding: .35rem .7rem;
+  border: 2px solid var(--card-color);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .04);
+}
+.services-grid--five .service-card--feature .service-card__tag {
+  color: var(--orange);
+  border-color: var(--orange);
+  background: rgba(255, 77, 46, .12);
+}
 .service-card {
   --card-color: var(--orange);
   position: relative;
