@@ -1,22 +1,17 @@
-/* RGJ — Estudio profesional integral
-   Interacciones y comportamiento del sitio */
+/* Rafa García Juanicó — site behavior */
 (() => {
   'use strict';
 
-  // Año en footer
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Header con sombra al hacer scroll
   const header = document.querySelector('.site-header');
   const onScroll = () => {
-    if (!header) return;
-    header.classList.toggle('is-scrolled', window.scrollY > 8);
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 8);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Toggle del menú móvil
   const toggle = document.querySelector('.nav__toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   if (toggle && mobileMenu) {
@@ -35,7 +30,6 @@
     });
   }
 
-  // Smooth scroll con offset por header sticky (fallback si scroll-behavior no aplica)
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href');
@@ -49,8 +43,7 @@
     });
   });
 
-  // Reveal on scroll
-  const revealEls = document.querySelectorAll('.section, .hero__content, .cta-banner, .service-card, .process li, .about-card');
+  const revealEls = document.querySelectorAll('.section, .hero__inner, .cta-banner, .service-card, .process li, .about-card');
   revealEls.forEach((el) => el.classList.add('reveal'));
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -60,34 +53,14 @@
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
     revealEls.forEach((el) => io.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 
-  // Parallax suave de los blobs en el hero
-  const blobs = document.querySelectorAll('.blob');
-  if (blobs.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    let raf = null;
-    window.addEventListener('mousemove', (e) => {
-      if (raf) return;
-      raf = requestAnimationFrame(() => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 30;
-        const y = (e.clientY / window.innerHeight - 0.5) * 30;
-        blobs.forEach((b, i) => {
-          const f = (i + 1) * 0.6;
-          b.style.transform = `translate(${x * f}px, ${y * f}px)`;
-        });
-        raf = null;
-      });
-    });
-  }
-
-  // Validación y feedback del formulario
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
-
   const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
   if (form && status) {
@@ -103,7 +76,6 @@
         mensaje: form.mensaje.value.trim(),
       };
 
-      // Marcar errores
       let firstError = null;
       [['nombre', !!data.nombre], ['email', isEmail(data.email)], ['tema', !!data.tema], ['mensaje', data.mensaje.length >= 10]].forEach(([name, ok]) => {
         const field = form[name].closest('.field');
@@ -115,11 +87,10 @@
       if (firstError) {
         firstError.focus();
         status.classList.add('is-error');
-        status.textContent = 'Revisá los campos marcados, por favor.';
+        status.textContent = 'Revisá los campos marcados.';
         return;
       }
 
-      // Simulación de envío (sin backend). Para producción, conectar a un endpoint o servicio (Formspree, Resend, etc.)
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
@@ -130,7 +101,7 @@
         submitBtn.innerHTML = originalText;
         form.reset();
         status.classList.add('is-success');
-        status.textContent = '¡Gracias! Recibimos tu consulta y te respondemos en menos de 24 hs.';
+        status.textContent = 'Recibí tu consulta. Te respondo en menos de 24 hs.';
       }, 900);
     });
   }

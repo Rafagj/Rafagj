@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Rafa García Juanicó — DJ, Brand Builder, Live Streaming Producer, Creative Content y Drone Pilot. Diseño momentos que perduran." />
-  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="theme-color" content="#0A0A0B" />
   <meta property="og:title" content="Rafa García Juanicó — DJ · Ads · Streaming · Creative · Drone" />
   <meta property="og:description" content="27 años creando experiencias. DJ, branding, transmisiones en vivo, creative content y tomas aéreas con dron." />
   <meta property="og:type" content="website" />
@@ -12,254 +12,885 @@
   <title>Rafa García Juanicó — DJ · Creative · Drone Pilot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&display=swap" rel="stylesheet" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FF4D2E'/%3E%3Ctext x='50' y='66' font-family='Arial Black,sans-serif' font-size='52' font-weight='900' text-anchor='middle' fill='%23fff'%3ER%3C/text%3E%3C/svg%3E" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
+/* =========================================================
+   Rafa García Juanicó — Premium tech aesthetic (Linear/Vercel)
+   ========================================================= */
+
 :root {
-  --bg: #FAFAF7; --bg-alt: #F1EEE8; --ink: #0A0A0A; --ink-soft: #2A2A2A; --muted: #6B6B6B; --line: #1F1F1F;
-  --orange: #FF4D2E; --blue: #1E40FF; --yellow: #FFD60A; --cyan: #06B6D4; --magenta: #FF2EAA;
-  --radius: 22px; --radius-lg: 36px;
-  --shadow-hard: 6px 6px 0 var(--ink); --shadow-soft: 0 30px 80px -20px rgba(10, 10, 10, .25);
-  --font-sans: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --bg: #0A0A0B;
+  --bg-1: #111114;
+  --bg-2: #18181C;
+  --bg-3: #1F1F25;
+
+  --ink: #FAFAFA;
+  --ink-1: #D4D4D8;
+  --ink-2: #A1A1AA;
+  --ink-3: #71717A;
+  --ink-4: #52525B;
+
+  --line: rgba(255, 255, 255, 0.06);
+  --line-1: rgba(255, 255, 255, 0.10);
+  --line-2: rgba(255, 255, 255, 0.18);
+  --line-3: rgba(255, 255, 255, 0.30);
+
+  --accent: #4F8BFF;
+  --accent-soft: rgba(79, 139, 255, 0.12);
+  --grad-1: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+  --grad-mesh: radial-gradient(60% 50% at 80% 0%, rgba(99, 102, 241, 0.18) 0%, transparent 60%),
+               radial-gradient(50% 50% at 10% 20%, rgba(236, 72, 153, 0.10) 0%, transparent 60%),
+               radial-gradient(40% 40% at 50% 100%, rgba(79, 139, 255, 0.10) 0%, transparent 60%);
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 1px 0 0 rgba(255,255,255,0.05) inset;
+  --shadow-md: 0 8px 30px -12px rgba(0,0,0,0.6), 0 1px 0 0 rgba(255,255,255,0.05) inset;
+  --shadow-lg: 0 24px 80px -24px rgba(0,0,0,0.8), 0 1px 0 0 rgba(255,255,255,0.06) inset;
+
+  --font-sans: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
   --container: 1200px;
+  --container-tight: 920px;
 }
+
+/* Reset */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--font-sans); color: var(--ink); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.011em;
+  overflow-x: hidden;
+}
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
-::selection { background: var(--orange); color: #fff; }
 
-.marquee { background: var(--ink); color: var(--bg); border-bottom: 2px solid var(--ink); overflow: hidden; font-size: 13px; letter-spacing: .15em; text-transform: uppercase; font-weight: 600; }
-.marquee__track { display: flex; gap: 2.5rem; white-space: nowrap; padding: .65rem 0; width: max-content; animation: marquee 30s linear infinite; }
-.marquee__track span:nth-child(2n) { color: var(--orange); }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+::selection { background: var(--ink); color: var(--bg); }
 
-.site-header { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem clamp(1rem, 4vw, 3rem); background: rgba(250, 250, 247, .85); backdrop-filter: saturate(150%) blur(12px); -webkit-backdrop-filter: saturate(150%) blur(12px); border-bottom: 1px solid rgba(10, 10, 10, .08); }
-.site-header.is-scrolled { border-bottom-color: rgba(10, 10, 10, .15); }
-.logo { display: inline-flex; align-items: baseline; gap: .6rem; }
-.logo__mark { font-family: var(--font-display); font-weight: 900; font-size: 1.55rem; letter-spacing: -.02em; line-height: 1; }
-.logo__mark em { color: var(--orange); font-style: normal; margin: 0 1px; }
-.logo__sub { font-size: .7rem; letter-spacing: .25em; text-transform: uppercase; color: var(--muted); }
-.nav { display: flex; gap: 1.75rem; font-weight: 500; font-size: .98rem; }
-.nav a { position: relative; padding: .25rem 0; transition: color .2s; }
-.nav a::after { content: ''; position: absolute; inset: auto 0 -2px; height: 2px; background: var(--orange); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
-.nav a:hover::after { transform: scaleX(1); }
+.mono { font-family: var(--font-mono); font-feature-settings: "ss01"; }
 
-.nav__toggle { display: none; width: 44px; height: 44px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 2px solid var(--ink); border-radius: 12px; }
-.nav__toggle span { display: block; width: 18px; height: 2px; background: var(--ink); transition: transform .25s, opacity .2s; }
-.nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1.25rem, 4vw, 2.5rem);
+  background: rgba(10, 10, 11, 0.6);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .25s, background .25s;
+}
+.site-header.is-scrolled {
+  border-bottom-color: var(--line);
+  background: rgba(10, 10, 11, 0.85);
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.logo__mark {
+  display: inline-grid;
+  place-items: center;
+  width: 28px; height: 28px;
+  border-radius: 7px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: -0.02em;
+}
+.logo__name { font-size: 0.95rem; }
+.logo__name em { font-style: normal; color: var(--ink-3); margin-left: .35rem; }
+
+.nav {
+  display: flex;
+  gap: 1.75rem;
+  font-size: 0.92rem;
+  color: var(--ink-2);
+}
+.nav a {
+  position: relative;
+  padding: .25rem 0;
+  transition: color .2s;
+}
+.nav a:hover { color: var(--ink); }
+
+.nav__toggle {
+  display: none;
+  width: 40px; height: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid var(--line-1);
+  border-radius: 8px;
+}
+.nav__toggle span {
+  display: block;
+  width: 16px; height: 1.5px;
+  background: var(--ink-1);
+  transition: transform .25s, opacity .2s;
+}
+.nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-.mobile-menu { display: none; flex-direction: column; gap: 1rem; padding: 1.5rem clamp(1rem, 4vw, 3rem) 2rem; background: var(--bg); border-bottom: 2px solid var(--ink); font-size: 1.4rem; font-family: var(--font-display); font-weight: 600; }
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 .mobile-menu.is-open { display: flex; }
-.mobile-menu .btn { align-self: flex-start; font-family: var(--font-sans); font-size: 1rem; }
+.mobile-menu a { padding: .85rem 0; border-bottom: 1px solid var(--line); color: var(--ink-1); }
+.mobile-menu a:last-child { border-bottom: 0; }
+.mobile-menu .btn { margin-top: 1rem; align-self: flex-start; }
 
-.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 1.4rem; border-radius: 999px; font-weight: 600; font-size: 1rem; letter-spacing: .01em; transition: transform .2s ease, box-shadow .2s ease, background .2s, color .2s; white-space: nowrap; border: 2px solid var(--ink); }
-.btn--primary { background: var(--ink); color: var(--bg); box-shadow: var(--shadow-hard); }
-.btn--primary:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--orange); }
-.btn--accent { background: var(--orange); color: var(--ink); box-shadow: var(--shadow-hard); }
-.btn--accent:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
-.btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
-.btn--ghost:hover { background: var(--ink); color: var(--bg); }
-.btn--pill { padding: .55rem 1.05rem; font-size: .9rem; }
-.btn--lg { padding: 1.1rem 1.8rem; font-size: 1.1rem; }
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .65rem 1.05rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: -0.005em;
+  border: 1px solid transparent;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.btn--primary {
+  background: var(--ink);
+  color: var(--bg);
+}
+.btn--primary:hover {
+  background: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px -8px rgba(255, 255, 255, 0.25);
+}
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--ink);
+  border-color: var(--line-1);
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--line-2);
+}
+.btn--lg { padding: .85rem 1.4rem; font-size: 1rem; border-radius: 10px; }
 .btn--block { width: 100%; justify-content: center; }
+.btn .arrow { transition: transform .2s; }
+.btn:hover .arrow { transform: translateX(2px); }
 
-.hero { position: relative; padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem) clamp(4rem, 10vw, 8rem); overflow: hidden; isolation: isolate; }
-.hero__bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
-.blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; animation: float 14s ease-in-out infinite; }
-.blob--1 { width: 420px; height: 420px; background: var(--orange); top: -120px; right: -80px; }
-.blob--2 { width: 360px; height: 360px; background: var(--blue); bottom: -120px; left: -100px; animation-delay: -4s; }
-.blob--3 { width: 260px; height: 260px; background: var(--yellow); top: 40%; left: 50%; animation-delay: -8s; opacity: .35; }
-@keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(40px, -30px) scale(1.06); } }
+/* Hero */
+.hero {
+  position: relative;
+  padding: clamp(5rem, 12vw, 9rem) clamp(1.25rem, 4vw, 2.5rem) clamp(5rem, 12vw, 9rem);
+  overflow: hidden;
+  isolation: isolate;
+  border-bottom: 1px solid var(--line);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-mesh);
+  z-index: -2;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, transparent 60%, var(--bg) 100%),
+    repeating-linear-gradient(0deg, transparent 0, transparent 39px, rgba(255,255,255,0.025) 39px, rgba(255,255,255,0.025) 40px),
+    repeating-linear-gradient(90deg, transparent 0, transparent 39px, rgba(255,255,255,0.025) 39px, rgba(255,255,255,0.025) 40px);
+  z-index: -1;
+  pointer-events: none;
+  mask: radial-gradient(60% 60% at 50% 30%, #000 0%, transparent 80%);
+  -webkit-mask: radial-gradient(60% 60% at 50% 30%, #000 0%, transparent 80%);
+}
+.hero__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  position: relative;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .35rem .75rem .35rem .55rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line-1);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ink-1);
+  margin: 0 0 2rem;
+}
+.eyebrow .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #22C55E;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18); }
+  50% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
 
-.hero__content { max-width: var(--container); margin: 0 auto; position: relative; }
-.eyebrow { display: inline-flex; align-items: center; gap: .55rem; padding: .5rem .95rem; background: var(--bg); border: 2px solid var(--ink); border-radius: 999px; font-size: .85rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 1.75rem; }
-.eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(255, 77, 46, .25); animation: pulse 1.6s ease-in-out infinite; }
-@keyframes pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(255, 77, 46, .25); } 50% { box-shadow: 0 0 0 9px rgba(255, 77, 46, 0); } }
-.hero__title { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.6rem, 7.5vw, 6.5rem); line-height: .95; letter-spacing: -.025em; margin: 0 0 1.5rem; max-width: 1000px; }
-.hl { font-style: italic; font-weight: 900; position: relative; display: inline-block; padding: 0 .15em; }
-.hl--orange { color: var(--orange); }
-.hl--blue { color: var(--blue); }
-.hl::after { content: ''; position: absolute; inset: auto 0 .08em 0; height: .12em; background: currentColor; opacity: .25; transform: skewX(-12deg); }
+.hero__title {
+  font-size: clamp(2.6rem, 7vw, 5.6rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.5rem;
+  max-width: 980px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #C2C2C8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero__title .em {
+  font-style: italic;
+  font-weight: 500;
+  background: linear-gradient(135deg, #A1A1AA 0%, #4F8BFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-.hero__lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); max-width: 640px; color: var(--ink-soft); margin: 0 0 2.25rem; }
-.hero__ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.hero__lead {
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  max-width: 620px;
+  color: var(--ink-2);
+  margin: 0 0 2.5rem;
+  line-height: 1.55;
+}
 
-.hero__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 700px; border-top: 2px solid var(--ink); padding-top: 1.5rem; }
-.hero__stats li { display: flex; flex-direction: column; gap: .15rem; }
-.hero__stats strong { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1; }
-.hero__stats span { font-size: .85rem; color: var(--muted); }
+.hero__ctas {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
 
-.hero__badge { position: absolute; right: clamp(1rem, 4vw, 3rem); bottom: clamp(2rem, 6vw, 4rem); width: 130px; height: 130px; display: grid; place-items: center; color: var(--ink); }
-.hero__badge svg { width: 100%; height: 100%; }
-.hero__badge-arrow { position: absolute; font-size: 1.6rem; font-weight: 700; }
-.spin-slow { animation: spin 22s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 720px;
+  border-top: 1px solid var(--line);
+  padding-top: 1.75rem;
+}
+.hero__stats li { display: flex; flex-direction: column; gap: .35rem; }
+.hero__stats strong {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+}
+.hero__stats span {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
 
-.section { padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 3rem); max-width: var(--container); margin: 0 auto; }
-.section__head { margin-bottom: 3rem; max-width: 1000px; }
-.section__num { display: inline-block; font-family: var(--font-sans); font-weight: 700; font-size: .85rem; letter-spacing: .25em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
-.section__title { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4.8vw, 4rem); line-height: 1; letter-spacing: -.02em; margin: 0; }
+/* Sections shared */
+.section {
+  padding: clamp(5rem, 10vw, 8rem) clamp(1.25rem, 4vw, 2.5rem);
+  max-width: var(--container);
+  margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+.section:last-of-type { border-bottom: 0; }
+.section__head { margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width: var(--container-tight); }
+.section__num {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+.section__title {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin: 0;
+  max-width: 880px;
+  color: var(--ink);
+}
+.section__title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+.section__lead {
+  margin-top: 1.25rem;
+  color: var(--ink-2);
+  font-size: 1.05rem;
+  max-width: 640px;
+}
 
-.section--about { border-top: 2px solid var(--ink); }
-.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
-.about-text p { font-size: 1.1rem; margin: 0 0 1.25rem; color: var(--ink-soft); }
-.about-text strong { color: var(--ink); }
-.bullets { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem 1.5rem; margin-top: 1.5rem; font-weight: 500; }
-.bullets li { display: flex; gap: .5rem; }
-.bullets span { color: var(--orange); font-weight: 700; }
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+.about-text p {
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem;
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 580px;
+}
+.about-text strong { color: var(--ink); font-weight: 500; }
+.bullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-top: 2rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.bullets li {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: 1rem 1.2rem;
+  background: var(--bg);
+  font-size: 0.92rem;
+  color: var(--ink-1);
+  font-weight: 500;
+}
+.bullets li::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--ink-2), transparent 70%);
+  border: 1px solid var(--line-2);
+}
 
-.about-card { background: var(--ink); color: var(--bg); padding: 2.25rem; border-radius: var(--radius-lg); position: relative; transform: rotate(1.5deg); box-shadow: var(--shadow-hard); }
-.about-card__quote { font-family: var(--font-display); font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 600; font-style: italic; line-height: 1.2; margin: 0 0 1.75rem; }
-.about-card__quote::before { content: '“'; color: var(--orange); margin-right: .25rem; }
-.about-card__author { display: flex; align-items: center; gap: .9rem; border-top: 1px solid rgba(255, 255, 255, .15); padding-top: 1.25rem; }
-.about-card__author strong { display: block; font-size: .95rem; }
-.about-card__author span { font-size: .8rem; opacity: .7; }
-.avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--orange); color: var(--ink); display: grid; place-items: center; font-weight: 800; font-size: 1rem; font-family: var(--font-display); }
+.about-card {
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg) 100%);
+  border: 1px solid var(--line-1);
+  padding: 2rem;
+  border-radius: var(--radius);
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+.about-card__quote {
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  margin: 0 0 2rem;
+  color: var(--ink);
+}
+.about-card__quote::before {
+  content: '“';
+  display: block;
+  font-size: 2.5rem;
+  line-height: 0.5;
+  color: var(--ink-3);
+  margin-bottom: .75rem;
+}
+.about-card__author {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
+}
+.about-card__author strong { display: block; font-size: 0.92rem; font-weight: 500; color: var(--ink); }
+.about-card__author span { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.02em; }
+.avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366F1, #8B5CF6);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: -0.01em;
+  color: #fff;
+  border: 1px solid var(--line-2);
+}
 
-.section--services { border-top: 2px solid var(--ink); }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.services-grid--five { grid-template-columns: repeat(6, 1fr); }
-.services-grid--five .service-card { grid-column: span 3; }
-.services-grid--five .service-card--feature { grid-column: span 6; background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.services-grid--five .service-card--feature h3 { font-size: clamp(2rem, 4vw, 3rem); }
-.services-grid--five .service-card--feature p { color: rgba(250, 250, 247, .82); font-size: 1.05rem; max-width: 720px; }
-.services-grid--five .service-card--feature ul { color: rgba(250, 250, 247, .65); }
-.services-grid--five .service-card--feature .service-card__num { font-size: 3.5rem; }
-.services-grid--five .service-card--feature .service-card__more { color: var(--bg); }
-.services-grid--five .service-card--feature a { color: var(--orange); }
-.services-grid--five .service-card--feature:hover, .services-grid--five .service-card--feature:focus-visible { background: var(--ink); box-shadow: 8px 8px 0 var(--orange); }
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.service-card {
+  --c: var(--accent);
+  position: relative;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  cursor: pointer;
+  transition: background .25s;
+  outline: none;
+  grid-column: span 2;
+}
+.service-card:hover,
+.service-card:focus-visible { background: var(--bg-1); }
+.service-card--feature { grid-column: span 6; background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg) 60%); }
+.service-card--feature:hover,
+.service-card--feature:focus-visible { background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg-1) 60%); }
+.service-card--feature::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 80% at 100% 0%, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
 
-@media (min-width: 1100px) { .services-grid--five { grid-template-columns: repeat(4, 1fr); } .services-grid--five .service-card { grid-column: span 1; } .services-grid--five .service-card--feature { grid-column: span 4; } }
-@media (max-width: 760px) { .services-grid--five { grid-template-columns: 1fr; } .services-grid--five .service-card, .services-grid--five .service-card--feature { grid-column: 1; } }
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { grid-column: span 1; }
+  .service-card--feature { grid-column: span 2; }
+}
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card,
+  .service-card--feature { grid-column: 1; }
+}
 
-.service-card__tag { position: absolute; top: 1.5rem; right: 1.5rem; font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--card-color); padding: .35rem .7rem; border: 2px solid var(--card-color); border-radius: 999px; background: rgba(255, 255, 255, .04); }
-.services-grid--five .service-card--feature .service-card__tag { color: var(--orange); border-color: var(--orange); background: rgba(255, 77, 46, .12); }
-.service-card { --card-color: var(--orange); position: relative; padding: 2rem; background: var(--bg); border: 2px solid var(--ink); border-radius: var(--radius); transition: transform .3s ease, box-shadow .3s ease, background .3s; cursor: pointer; display: flex; flex-direction: column; gap: 1rem; overflow: hidden; outline: none; }
-.service-card::before { content: ''; position: absolute; inset: auto 0 0 0; height: 5px; background: var(--card-color); transform-origin: left; transition: height .3s ease; }
-.service-card:hover, .service-card:focus-visible { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--ink); background: var(--bg-alt); }
-.service-card:hover::before, .service-card:focus-visible::before { height: 100%; opacity: .12; }
+.service-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+}
+.service-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.service-card__num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-4);
+}
+.service-card h3 {
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin: 0;
+  color: var(--ink);
+  position: relative;
+}
+.service-card--feature h3 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.035em;
+  font-weight: 500;
+}
+.service-card p {
+  color: var(--ink-2);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+  max-width: 56ch;
+}
+.service-card--feature p { font-size: 1.05rem; max-width: 64ch; }
+.service-card a { color: var(--ink); border-bottom: 1px solid var(--line-2); }
+.service-card a:hover { border-bottom-color: var(--ink); }
 
-.service-card__num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--card-color); line-height: 1; }
-.service-card h3 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin: 0; letter-spacing: -.01em; }
-.service-card p { color: var(--ink-soft); margin: 0; }
-.service-card ul { display: flex; flex-direction: column; gap: .35rem; font-size: .92rem; color: var(--muted); }
-.service-card ul li::before { content: '— '; color: var(--card-color); font-weight: 700; }
-.service-card__more { margin-top: auto; font-weight: 600; font-size: .95rem; color: var(--ink); align-self: flex-start; border-bottom: 2px solid var(--card-color); padding-bottom: 2px; transition: gap .2s, transform .2s; }
-.service-card:hover .service-card__more { transform: translateX(4px); }
+.service-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-size: 0.88rem;
+  color: var(--ink-2);
+  position: relative;
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+  margin-top: auto;
+}
+.service-card ul li {
+  display: flex;
+  gap: .65rem;
+  align-items: baseline;
+}
+.service-card ul li::before {
+  content: '';
+  display: block;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--ink-3);
+  flex-shrink: 0;
+  transform: translateY(-3px);
+}
 
-.section--process { border-top: 2px solid var(--ink); background: var(--ink); color: var(--bg); max-width: none; margin: 0; padding-left: clamp(1rem, 4vw, 3rem); padding-right: clamp(1rem, 4vw, 3rem); }
-.section--process .section__head { max-width: var(--container); margin: 0 auto 3rem; }
-.section--process .section__num { color: var(--yellow); }
-.process { max-width: var(--container); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; counter-reset: step; }
-.process li { position: relative; padding-top: 1rem; border-top: 2px solid var(--bg); }
-.process__num { font-family: var(--font-display); font-size: 3rem; font-weight: 900; color: var(--yellow); line-height: 1; display: block; margin-bottom: .5rem; }
-.process h3 { font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 .5rem; }
-.process p { color: rgba(250, 250, 247, .75); margin: 0; }
+.service-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-3);
+  align-self: flex-start;
+  position: relative;
+  transition: color .2s;
+}
+.service-card:hover .service-card__more,
+.service-card:focus-visible .service-card__more { color: var(--ink); }
+.service-card__more svg { transition: transform .2s; }
+.service-card:hover .service-card__more svg { transform: translateX(2px); }
 
-.cta-banner { background: var(--orange); color: var(--ink); padding: clamp(3rem, 7vw, 5rem) clamp(1rem, 4vw, 3rem); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 2rem; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
-.cta-banner h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; margin: 0; line-height: 1; letter-spacing: -.02em; max-width: 900px; }
-.cta-banner .hl--orange { color: var(--ink); font-style: italic; }
-.cta-banner .hl::after { background: var(--ink); opacity: .15; }
-
-.section--contact { padding-top: clamp(4rem, 9vw, 7rem); padding-bottom: clamp(4rem, 9vw, 7rem); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 5vw, 5rem); }
-.contact-info__lead { font-size: 1.1rem; color: var(--ink-soft); max-width: 480px; margin: 1.5rem 0 2rem; }
-.contact-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
-.contact-list li { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; padding: .9rem 0; border-top: 1px solid rgba(10, 10, 10, .12); font-size: 1rem; }
-.contact-list li:last-child { border-bottom: 1px solid rgba(10, 10, 10, .12); }
-.contact-list__label { font-size: .75rem; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); font-weight: 600; }
-.contact-list a:hover { color: var(--orange); }
-
-.socials { display: flex; gap: .75rem; }
-.socials a { width: 44px; height: 44px; display: grid; place-items: center; border: 2px solid var(--ink); border-radius: 50%; font-weight: 700; font-size: .85rem; text-transform: lowercase; transition: transform .2s, background .2s, color .2s; }
-.socials a:hover { background: var(--ink); color: var(--bg); transform: translateY(-2px); }
-
-.contact-form { background: var(--ink); color: var(--bg); padding: clamp(1.5rem, 3vw, 2.5rem); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); display: flex; flex-direction: column; gap: 1.25rem; }
-.field { display: flex; flex-direction: column; gap: .5rem; }
-.field label { font-size: .8rem; text-transform: uppercase; letter-spacing: .15em; font-weight: 600; opacity: .8; }
-.field input, .field select, .field textarea { font: inherit; background: transparent; color: var(--bg); border: 0; border-bottom: 2px solid rgba(250, 250, 247, .2); padding: .75rem 0; outline: none; transition: border-color .2s; }
-.field input::placeholder, .field textarea::placeholder { color: rgba(250, 250, 247, .35); }
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--orange); }
-.field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--bg) 50%), linear-gradient(135deg, var(--bg) 50%, transparent 50%); background-position: calc(100% - 16px) center, calc(100% - 11px) center; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 2rem; }
-.field select option { color: var(--ink); background: var(--bg); }
-.field textarea { resize: vertical; }
-.field.is-error input, .field.is-error select, .field.is-error textarea { border-color: var(--orange); }
-
-.contact-form .btn--primary { background: var(--orange); color: var(--ink); border-color: var(--orange); margin-top: .5rem; }
-.contact-form .btn--primary:hover { background: var(--bg); color: var(--ink); border-color: var(--bg); box-shadow: 8px 8px 0 var(--orange); }
-.form__status { margin: 0; min-height: 1.25rem; font-size: .9rem; text-align: center; }
-.form__status.is-success { color: var(--yellow); }
-.form__status.is-error { color: var(--orange); }
-
-.site-footer { background: var(--ink); color: var(--bg); padding: 4rem clamp(1rem, 4vw, 3rem) 2rem; border-top: 2px solid var(--ink); }
-.site-footer__top { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; max-width: var(--container); margin: 0 auto; padding-bottom: 3rem; border-bottom: 1px solid rgba(250, 250, 247, .15); }
-.logo--footer .logo__sub { color: rgba(250, 250, 247, .6); }
-.site-footer__claim { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; font-style: italic; line-height: 1.05; margin: 0; text-align: right; }
-.site-footer__bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; font-size: .85rem; opacity: .7; max-width: var(--container); margin: 0 auto; }
-
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
+/* Process */
+.section--process .process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.process li {
+  background: var(--bg);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  position: relative;
+}
+.process__num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-4);
+  text-transform: uppercase;
+}
+.process h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--ink);
+}
+.process p { color: var(--ink-2); margin: 0; font-size: 0.92rem; line-height: 1.55; }
 
 @media (max-width: 900px) {
-  .nav, .nav__cta { display: none; }
+  .section--process .process { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .section--process .process { grid-template-columns: 1fr; }
+}
+
+/* CTA banner */
+.cta-banner {
+  position: relative;
+  padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 4vw, 2.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
+  overflow: hidden;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(50% 50% at 50% 0%, rgba(99, 102, 241, 0.18) 0%, transparent 60%),
+    radial-gradient(40% 40% at 30% 100%, rgba(236, 72, 153, 0.10) 0%, transparent 60%),
+    radial-gradient(40% 40% at 70% 100%, rgba(79, 139, 255, 0.10) 0%, transparent 60%);
+  z-index: -1;
+}
+.cta-banner h2 {
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  max-width: 800px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #B5B5BC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Contact */
+.section--contact { padding-bottom: clamp(5rem, 10vw, 8rem); }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+.contact-info__lead {
+  font-size: 1.05rem;
+  color: var(--ink-2);
+  max-width: 460px;
+  margin: 1.25rem 0 2rem;
+}
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--line);
+}
+.contact-list li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+.contact-list__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  align-self: center;
+}
+.contact-list a, .contact-list span { color: var(--ink-1); transition: color .2s; }
+.contact-list a:hover { color: var(--ink); }
+
+.socials {
+  display: flex;
+  gap: .5rem;
+}
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .9rem;
+  border: 1px solid var(--line-1);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--ink-1);
+  transition: all .2s;
+}
+.socials a:hover { border-color: var(--line-3); color: var(--ink); background: rgba(255,255,255,.03); }
+.socials svg { width: 14px; height: 14px; }
+
+.contact-form {
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg) 100%);
+  border: 1px solid var(--line-1);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.field { display: flex; flex-direction: column; gap: .5rem; }
+.field label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.field input,
+.field select,
+.field textarea {
+  font: inherit;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--ink);
+  border: 1px solid var(--line-1);
+  border-radius: var(--radius-sm);
+  padding: .75rem .9rem;
+  outline: none;
+  transition: border-color .2s, background .2s;
+  font-size: 0.95rem;
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--ink-4); }
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--line-3);
+  background: rgba(255, 255, 255, 0.04);
+}
+.field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 14px) center;
+  padding-right: 2.4rem;
+}
+.field select option { color: var(--ink); background: var(--bg-1); }
+.field textarea { resize: vertical; min-height: 110px; }
+.field.is-error input,
+.field.is-error select,
+.field.is-error textarea { border-color: #EF4444; }
+
+.contact-form .btn--primary { margin-top: .5rem; }
+.form__status {
+  margin: 0;
+  min-height: 1.25rem;
+  font-size: 0.85rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  color: var(--ink-3);
+}
+.form__status.is-success { color: #22C55E; }
+.form__status.is-error { color: #EF4444; }
+
+/* Footer */
+.site-footer {
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 4vw, 2.5rem) 2rem;
+  border-top: 1px solid var(--line);
+}
+.site-footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.site-footer__claim {
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 0;
+  text-align: right;
+  color: var(--ink-2);
+}
+.site-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-4);
+  text-transform: uppercase;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav { display: none; }
   .nav__toggle { display: flex; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; }
-  .about-card { transform: none; }
-  .hero__badge { display: none; }
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; }
   .site-footer__top { flex-direction: column; align-items: flex-start; }
   .site-footer__claim { text-align: left; }
 }
 @media (max-width: 540px) {
-  .hero__stats { grid-template-columns: 1fr 1fr; }
-  .hero__stats li:last-child { grid-column: 1 / -1; }
+  .hero__stats { grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+  .hero__stats strong { font-size: 1.4rem; }
   .bullets { grid-template-columns: 1fr; }
   .contact-list li { grid-template-columns: 1fr; gap: .25rem; }
-  .btn { padding: .8rem 1.2rem; font-size: .95rem; }
+  .contact-list__label { font-size: 0.68rem; }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
-  </style>
+
+</style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FAFAFA'/%3E%3Ctext x='50' y='66' font-family='Geist,Inter,sans-serif' font-size='46' font-weight='600' text-anchor='middle' fill='%230A0A0B' letter-spacing='-2'%3ERGJ%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>DJ Sarapura</span><span aria-hidden="true">★</span>
-      <span>Brand Builder</span><span aria-hidden="true">★</span>
-      <span>Live Streaming</span><span aria-hidden="true">★</span>
-      <span>Creative Content</span><span aria-hidden="true">★</span>
-      <span>Drone Pilot</span><span aria-hidden="true">★</span>
-      <span>DJ Sarapura</span><span aria-hidden="true">★</span>
-      <span>Brand Builder</span><span aria-hidden="true">★</span>
-      <span>Live Streaming</span><span aria-hidden="true">★</span>
-      <span>Creative Content</span><span aria-hidden="true">★</span>
-      <span>Drone Pilot</span><span aria-hidden="true">★</span>
-    </div>
-  </div>
-
   <header class="site-header" id="top">
-    <a href="#top" class="logo" aria-label="Rafa García Juanicó — Inicio">
-      <span class="logo__mark">R<em>•</em>G<em>•</em>J</span>
-      <span class="logo__sub">Rafa García Juanicó</span>
+    <a href="#top" class="logo" aria-label="Rafa García Juanicó">
+      <span class="logo__mark">RGJ</span>
+      <span class="logo__name">Rafa García Juanicó</span>
     </a>
+
     <nav class="nav" aria-label="Navegación principal">
       <a href="#sobre">Sobre</a>
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Proceso</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <a href="#contacto" class="btn btn--pill btn--accent nav__cta">
-      <span>Hablemos</span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+
+    <a href="#contacto" class="btn btn--primary nav__cta">
+      Hablemos
+      <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
+
     <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
@@ -270,64 +901,78 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     <a href="#servicios">Servicios</a>
     <a href="#proceso">Proceso</a>
     <a href="#contacto">Contacto</a>
-    <a href="#contacto" class="btn btn--pill btn--accent">Hablemos →</a>
+    <a href="#contacto" class="btn btn--primary">Hablemos →</a>
   </div>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="blob blob--1"></div>
-        <div class="blob blob--2"></div>
-        <div class="blob blob--3"></div>
-      </div>
-      <div class="hero__content">
-        <p class="eyebrow"><span class="dot"></span> DJ · Creative · Drone Pilot · Buenos Aires</p>
-        <h1 class="hero__title">Sonido, <em class="hl hl--orange">imagen</em> y <em class="hl hl--blue">vuelo</em>.</h1>
-        <p class="hero__lead">Soy Rafa García Juanicó. Hace más de 27 años diseño momentos que perduran: DJ en Sarapura, Brand Builder, Live Streaming Producer, Creative Content y Drone Pilot certificado.</p>
+      <div class="hero__inner">
+        <p class="eyebrow">
+          <span class="dot"></span>
+          Disponible para nuevos proyectos
+        </p>
+
+        <h1 class="hero__title">
+          Sonido, imagen <span class="em">y vuelo.</span>
+        </h1>
+
+        <p class="hero__lead">
+          Soy Rafa García Juanicó. Hace más de 27 años diseño momentos que perduran. DJ en Sarapura, Brand Builder, Live Streaming Producer, Creative Content y Drone Pilot certificado.
+        </p>
+
         <div class="hero__ctas">
-          <a href="#contacto" class="btn btn--primary">Hablemos
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          <a href="#contacto" class="btn btn--primary btn--lg">
+            Iniciar un proyecto
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
-          <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+          <a href="#servicios" class="btn btn--ghost btn--lg">
+            Ver servicios
+          </a>
         </div>
-        <ul class="hero__stats" aria-label="Indicadores">
-          <li><strong>+27</strong><span>años de trayectoria</span></li>
-          <li><strong>5</strong><span>disciplinas creativas</span></li>
-          <li><strong>1 a 1</strong><span>trato directo conmigo</span></li>
+
+        <ul class="hero__stats">
+          <li><strong>27+</strong><span>Años de oficio</span></li>
+          <li><strong>5</strong><span>Disciplinas</span></li>
+          <li><strong>1:1</strong><span>Trato directo</span></li>
         </ul>
-      </div>
-      <div class="hero__badge" aria-hidden="true">
-        <svg viewBox="0 0 200 200" class="spin-slow">
-          <defs>
-            <path id="circ" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
-          </defs>
-          <text font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" letter-spacing="3" fill="currentColor">
-            <textPath href="#circ">DJ · CREATIVE · DRONE · ADS · STREAMING · DJ · CREATIVE · </textPath>
-          </text>
-        </svg>
-        <span class="hero__badge-arrow">↓</span>
       </div>
     </section>
 
+    <!-- SOBRE -->
     <section class="section section--about" id="sobre">
       <div class="section__head">
-        <span class="section__num">01 —</span>
-        <h2 class="section__title">No se trata <em class="hl hl--blue">solo</em> de música. Se trata de <em class="hl hl--orange">diseñar</em> momentos.</h2>
+        <span class="section__num">01 / Sobre</span>
+        <h2 class="section__title">
+          No se trata solo de música. <em>Se trata de diseñar momentos.</em>
+        </h2>
       </div>
+
       <div class="about-grid">
         <div class="about-text">
-          <p>Soy <strong>Rafa García Juanicó</strong>. Llevo más de <strong>27 años como DJ en Sarapura</strong>, donde tuve el privilegio de acompañar cientos de eventos sociales y corporativos creando experiencias.</p>
-          <p>Mi enfoque combina la <strong>curaduría musical personalizada</strong> con una profunda lectura del ambiente: generar climas y emociones genuinas. A lo largo de estas casi tres décadas no solo evolucioné técnicamente, sino que desarrollé una sensibilidad especial para entender lo que cada momento necesita.</p>
-          <p>Hoy ese mismo enfoque se extiende a otras disciplinas: branding y publicidad digital, transmisiones en vivo, creative content y vuelo de drones. Una sola firma para todo lo que tu evento, tu marca o tu proyecto necesitan contar.</p>
+          <p>
+            Soy <strong>Rafa García Juanicó</strong>. Llevo más de <strong>27 años como DJ en Sarapura</strong>, donde tuve el privilegio de acompañar cientos de eventos sociales y corporativos creando experiencias.
+          </p>
+          <p>
+            Mi enfoque combina la curaduría musical personalizada con una profunda lectura del ambiente: generar climas y emociones genuinas. A lo largo de estas casi tres décadas no solo evolucioné técnicamente, sino que desarrollé una sensibilidad especial para entender lo que cada momento necesita.
+          </p>
+          <p>
+            Hoy ese mismo enfoque se extiende a otras disciplinas: branding y publicidad digital, transmisiones en vivo, creative content y vuelo de drones. Una sola firma para todo lo que tu evento, tu marca o tu proyecto necesitan contar.
+          </p>
+
           <ul class="bullets">
-            <li><span>✦</span> Atención personalizada</li>
-            <li><span>✦</span> 27 años de oficio</li>
-            <li><span>✦</span> Trato directo, sin intermediarios</li>
-            <li><span>✦</span> Estándares profesionales</li>
+            <li>Atención personalizada</li>
+            <li>27 años de oficio</li>
+            <li>Trato directo, sin intermediarios</li>
+            <li>Estándares profesionales</li>
           </ul>
         </div>
+
         <aside class="about-card">
-          <p class="about-card__quote">No se trata de volar un dron. Se trata de volar bien, con propósito.</p>
+          <p class="about-card__quote">
+            No se trata de volar un dron. Se trata de volar bien, con propósito.
+          </p>
           <div class="about-card__author">
             <div class="avatar">RGJ</div>
             <div>
@@ -339,51 +984,80 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
       </div>
     </section>
 
+    <!-- SERVICIOS -->
     <section class="section section--services" id="servicios">
       <div class="section__head">
-        <span class="section__num">02 —</span>
-        <h2 class="section__title">Cinco oficios. <em class="hl hl--orange">Una</em> sola <em class="hl hl--blue">firma</em>.</h2>
+        <span class="section__num">02 / Servicios</span>
+        <h2 class="section__title">
+          Cinco oficios. <em>Una sola firma.</em>
+        </h2>
+        <p class="section__lead">
+          Cada disciplina con sus estándares profesionales. Trabajadas en conjunto cuando el proyecto lo necesita.
+        </p>
       </div>
-      <div class="services-grid services-grid--five">
-        <article class="service-card service-card--feature" tabindex="0" style="--card-color: #FF4D2E">
-          <div class="service-card__num">①</div>
-          <span class="service-card__tag">DJ</span>
+
+      <div class="services-grid">
+        <article class="service-card service-card--feature" tabindex="0">
+          <div class="service-card__head">
+            <span class="service-card__tag">DJ — Insignia</span>
+            <span class="service-card__num">01 / 05</span>
+          </div>
           <h3>DJ</h3>
-          <p>Más de 27 años como DJ en <a href="https://instagram.com/sarapuradjs" target="_blank" rel="noopener"><strong>Sarapura</strong></a>. Curaduría musical personalizada y lectura del ambiente para diseñar climas que se recuerdan.</p>
+          <p>
+            Más de 27 años como DJ en <a href="https://instagram.com/sarapuradjs" target="_blank" rel="noopener">Sarapura</a>. Curaduría musical personalizada y lectura del ambiente para diseñar climas que se recuerdan. Cada evento es único — la música también.
+          </p>
           <ul>
-            <li>Eventos sociales (casamientos, cumpleaños, fiestas)</li>
-            <li>Eventos corporativos y lanzamientos</li>
-            <li>Selección musical a medida</li>
+            <li>Eventos sociales: casamientos, cumpleaños, fiestas privadas</li>
+            <li>Eventos corporativos, lanzamientos y galas</li>
+            <li>Selección musical y ambientación a medida</li>
           </ul>
-          <span class="service-card__more">Conocer más →</span>
+          <span class="service-card__more">
+            Solicitar presupuesto
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
         </article>
-        <article class="service-card" tabindex="0" style="--card-color: #1E40FF">
-          <div class="service-card__num">②</div>
-          <span class="service-card__tag">Ads</span>
+
+        <article class="service-card" tabindex="0">
+          <div class="service-card__head">
+            <span class="service-card__tag">Ads</span>
+            <span class="service-card__num">02 / 05</span>
+          </div>
           <h3>Brand Builder &amp; Ads</h3>
           <p>Desarrollo de marcas digitales y campañas de publicidad. Desde el branding hasta la conversión.</p>
           <ul>
             <li>Branding y posicionamiento</li>
-            <li>Campañas Meta Ads &amp; Google Ads</li>
+            <li>Meta Ads &amp; Google Ads</li>
             <li>Optimización a conversión</li>
           </ul>
-          <span class="service-card__more">Conocer más →</span>
+          <span class="service-card__more">
+            Saber más
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
         </article>
-        <article class="service-card" tabindex="0" style="--card-color: #FFD60A">
-          <div class="service-card__num">③</div>
-          <span class="service-card__tag">Streaming</span>
+
+        <article class="service-card" tabindex="0">
+          <div class="service-card__head">
+            <span class="service-card__tag">Streaming</span>
+            <span class="service-card__num">03 / 05</span>
+          </div>
           <h3>Live Streaming</h3>
           <p>Producción y dirección de transmisiones en vivo con estándares profesionales. Transmitir es contar bien una historia en tiempo real.</p>
           <ul>
             <li>Eventos corporativos y conferencias</li>
             <li>Lanzamientos y experiencias artísticas</li>
-            <li>Multicámara, overlays, sonido e iluminación</li>
+            <li>Multicámara, overlays e integraciones</li>
           </ul>
-          <span class="service-card__more">Conocer más →</span>
+          <span class="service-card__more">
+            Saber más
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
         </article>
-        <article class="service-card" tabindex="0" style="--card-color: #06B6D4">
-          <div class="service-card__num">④</div>
-          <span class="service-card__tag">Creative</span>
+
+        <article class="service-card" tabindex="0">
+          <div class="service-card__head">
+            <span class="service-card__tag">Creative</span>
+            <span class="service-card__num">04 / 05</span>
+          </div>
           <h3>Creative Content</h3>
           <p>Piezas visuales, gráficas, audiovisuales y digitales que comunican con claridad y estética. Cada pieza nace de una necesidad.</p>
           <ul>
@@ -391,67 +1065,137 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
             <li>Diseño gráfico y flyers</li>
             <li>Contenido para gaming y marcas</li>
           </ul>
-          <span class="service-card__more">Conocer más →</span>
+          <span class="service-card__more">
+            Saber más
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
         </article>
-        <article class="service-card" tabindex="0" style="--card-color: #FF2EAA">
-          <div class="service-card__num">⑤</div>
-          <span class="service-card__tag">Drone</span>
+
+        <article class="service-card" tabindex="0">
+          <div class="service-card__head">
+            <span class="service-card__tag">Drone</span>
+            <span class="service-card__num">05 / 05</span>
+          </div>
           <h3>Drone Pilot</h3>
           <p>Piloto certificado especializado en tomas aéreas de alta calidad. No se trata de volar un dron: se trata de volar con propósito.</p>
           <ul>
             <li>Real estate e inspecciones</li>
-            <li>Videos institucionales y de marca</li>
+            <li>Videos institucionales</li>
             <li>Eventos y producciones audiovisuales</li>
           </ul>
-          <span class="service-card__more">Conocer más →</span>
+          <span class="service-card__more">
+            Saber más
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
         </article>
       </div>
     </section>
 
+    <!-- PROCESO -->
     <section class="section section--process" id="proceso">
       <div class="section__head">
-        <span class="section__num">03 —</span>
-        <h2 class="section__title">Cómo <em class="hl hl--orange">trabajamos</em> con vos.</h2>
+        <span class="section__num">03 / Proceso</span>
+        <h2 class="section__title">
+          Cómo trabajamos <em>juntos.</em>
+        </h2>
       </div>
+
       <ol class="process">
-        <li><span class="process__num">01</span><h3>Brief</h3><p>Te escucho. Entiendo el evento o proyecto, su tono, su gente y qué momentos querés crear.</p></li>
-        <li><span class="process__num">02</span><h3>Propuesta</h3><p>Plan claro con alcance, equipo, fechas y presupuesto cerrado. Vos decidís sin sorpresas.</p></li>
-        <li><span class="process__num">03</span><h3>Producción</h3><p>Ejecución impecable, atención al detalle y estándares profesionales. Lo que firmamos, sucede.</p></li>
-        <li><span class="process__num">04</span><h3>Entrega</h3><p>Material final listo para usar, ajustes incluidos y seguimiento posterior. Sin vueltas.</p></li>
+        <li>
+          <span class="process__num">01 — Brief</span>
+          <h3>Te escucho</h3>
+          <p>Entendemos el proyecto, su tono, su gente y los momentos que querés crear.</p>
+        </li>
+        <li>
+          <span class="process__num">02 — Propuesta</span>
+          <h3>Plan claro</h3>
+          <p>Alcance, equipo, fechas y presupuesto cerrado. Decidís sin sorpresas.</p>
+        </li>
+        <li>
+          <span class="process__num">03 — Producción</span>
+          <h3>Ejecución</h3>
+          <p>Atención al detalle y estándares profesionales. Lo que firmamos, sucede.</p>
+        </li>
+        <li>
+          <span class="process__num">04 — Entrega</span>
+          <h3>Material final</h3>
+          <p>Listo para usar, con ajustes incluidos y seguimiento posterior.</p>
+        </li>
       </ol>
     </section>
 
+    <!-- CTA banner -->
     <section class="cta-banner">
-      <h2>¿Tenés un evento o proyecto en mente? <em class="hl hl--orange">Diseñémoslo juntos.</em></h2>
-      <a href="#contacto" class="btn btn--primary btn--lg">Hablemos
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      <h2>¿Tenés un proyecto en mente?<br>Diseñémoslo juntos.</h2>
+      <a href="#contacto" class="btn btn--primary btn--lg">
+        Hablemos
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </section>
 
+    <!-- CONTACTO -->
     <section class="section section--contact" id="contacto">
+      <div class="section__head">
+        <span class="section__num">04 / Contacto</span>
+        <h2 class="section__title">
+          Hablemos. <em>Sin compromiso.</em>
+        </h2>
+      </div>
+
       <div class="contact-grid">
         <div class="contact-info">
-          <span class="section__num">04 —</span>
-          <h2 class="section__title">Hablemos.<br><em class="hl hl--blue">Sin compromiso.</em></h2>
-          <p class="contact-info__lead">Contame brevemente qué tenés en mente. Te respondo en menos de 24 hs.</p>
+          <p class="contact-info__lead">
+            Contame brevemente qué tenés en mente. Te respondo en menos de 24 hs.
+          </p>
+
           <ul class="contact-list">
-            <li><span class="contact-list__label">Email</span><a href="mailto:hola@rgj.com.ar">hola@rgj.com.ar</a></li>
-            <li><span class="contact-list__label">WhatsApp</span><a href="https://wa.me/5491141927700" target="_blank" rel="noopener">+54 9 11 4192-7700</a></li>
-            <li><span class="contact-list__label">Instagram</span><a href="https://instagram.com/rafagj" target="_blank" rel="noopener">@rafagj</a></li>
-            <li><span class="contact-list__label">Horario</span><span>Lun a Vie · 9 a 18 hs</span></li>
+            <li>
+              <span class="contact-list__label">Email</span>
+              <a href="mailto:hola@rgj.com.ar">hola@rgj.com.ar</a>
+            </li>
+            <li>
+              <span class="contact-list__label">WhatsApp</span>
+              <a href="https://wa.me/5491141927700" target="_blank" rel="noopener">+54 9 11 4192-7700</a>
+            </li>
+            <li>
+              <span class="contact-list__label">Instagram</span>
+              <a href="https://instagram.com/rafagj" target="_blank" rel="noopener">@rafagj</a>
+            </li>
+            <li>
+              <span class="contact-list__label">Horario</span>
+              <span>Lun a Vie · 9 a 18 hs</span>
+            </li>
           </ul>
+
           <div class="socials">
-            <a href="https://instagram.com/rafagj" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
-            <a href="https://wa.me/5491141927700" target="_blank" rel="noopener" aria-label="WhatsApp">wa</a>
-            <a href="mailto:hola@rgj.com.ar" aria-label="Email">@</a>
+            <a href="https://instagram.com/rafagj" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </a>
+            <a href="https://wa.me/5491141927700" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              WhatsApp
+            </a>
+            <a href="mailto:hola@rgj.com.ar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
           </div>
         </div>
+
         <form class="contact-form" id="contactForm" novalidate>
-          <div class="field"><label for="nombre">Nombre y apellido</label><input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Ej: María Pérez" /></div>
-          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email" placeholder="vos@email.com" /></div>
-          <div class="field"><label for="tema">¿Qué necesitás?</label>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="vos@email.com" />
+          </div>
+          <div class="field">
+            <label for="tema">Servicio</label>
             <select id="tema" name="tema" required>
-              <option value="">Elegí un servicio...</option>
+              <option value="">Elegí un servicio</option>
               <option>DJ — Evento social o corporativo</option>
               <option>Brand Builder &amp; Ads</option>
               <option>Live Streaming</option>
@@ -460,10 +1204,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
               <option>Combinación / Otro</option>
             </select>
           </div>
-          <div class="field"><label for="mensaje">Contame brevemente</label><textarea id="mensaje" name="mensaje" rows="4" required placeholder="Tipo de evento, fecha estimada, lugar, objetivo..."></textarea></div>
-          <button type="submit" class="btn btn--primary btn--block">Enviar consulta
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Tipo de evento, fecha estimada, lugar, objetivo..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block btn--lg">
+            Enviar consulta
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </button>
+
           <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -472,26 +1222,32 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
   <footer class="site-footer">
     <div class="site-footer__top">
-      <div class="logo logo--footer">
-        <span class="logo__mark">R<em>•</em>G<em>•</em>J</span>
-        <span class="logo__sub">Rafa García Juanicó · DJ · Creative · Drone Pilot</span>
+      <div class="logo">
+        <span class="logo__mark">RGJ</span>
+        <span class="logo__name">Rafa García Juanicó <em>· Buenos Aires</em></span>
       </div>
-      <p class="site-footer__claim">Diseño momentos<br>que perduran.</p>
+      <p class="site-footer__claim">
+        Diseño momentos<br>que perduran.
+      </p>
     </div>
     <div class="site-footer__bottom">
-      <small>© <span id="year"></span> Rafa García Juanicó · Todos los derechos reservados.</small>
-      <small>Hecho con <span aria-hidden="true">✦</span> en Buenos Aires</small>
+      <small>© <span id="year"></span> · Rafa García Juanicó</small>
+      <small>rgj.com.ar</small>
     </div>
   </footer>
 
   <script>
+/* Rafa García Juanicó — site behavior */
 (() => {
   'use strict';
+
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const header = document.querySelector('.site-header');
-  const onScroll = () => { if (header) header.classList.toggle('is-scrolled', window.scrollY > 8); };
+  const onScroll = () => {
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 8);
+  };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -526,31 +1282,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     });
   });
 
-  const revealEls = document.querySelectorAll('.section, .hero__content, .cta-banner, .service-card, .process li, .about-card');
+  const revealEls = document.querySelectorAll('.section, .hero__inner, .cta-banner, .service-card, .process li, .about-card');
   revealEls.forEach((el) => el.classList.add('reveal'));
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
       });
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
     revealEls.forEach((el) => io.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add('is-visible'));
-  }
-
-  const blobs = document.querySelectorAll('.blob');
-  if (blobs.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    let raf = null;
-    window.addEventListener('mousemove', (e) => {
-      if (raf) return;
-      raf = requestAnimationFrame(() => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 30;
-        const y = (e.clientY / window.innerHeight - 0.5) * 30;
-        blobs.forEach((b, i) => { const f = (i + 1) * 0.6; b.style.transform = `translate(${x * f}px, ${y * f}px)`; });
-        raf = null;
-      });
-    });
   }
 
   const form = document.getElementById('contactForm');
@@ -560,26 +1305,47 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   if (form && status) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      status.className = 'form__status'; status.textContent = '';
-      const data = { nombre: form.nombre.value.trim(), email: form.email.value.trim(), tema: form.tema.value, mensaje: form.mensaje.value.trim() };
+      status.className = 'form__status';
+      status.textContent = '';
+
+      const data = {
+        nombre: form.nombre.value.trim(),
+        email: form.email.value.trim(),
+        tema: form.tema.value,
+        mensaje: form.mensaje.value.trim(),
+      };
+
       let firstError = null;
       [['nombre', !!data.nombre], ['email', isEmail(data.email)], ['tema', !!data.tema], ['mensaje', data.mensaje.length >= 10]].forEach(([name, ok]) => {
-        const field = form[name].closest('.field'); if (!field) return;
+        const field = form[name].closest('.field');
+        if (!field) return;
         field.classList.toggle('is-error', !ok);
         if (!ok && !firstError) firstError = form[name];
       });
-      if (firstError) { firstError.focus(); status.classList.add('is-error'); status.textContent = 'Revisá los campos marcados, por favor.'; return; }
+
+      if (firstError) {
+        firstError.focus();
+        status.classList.add('is-error');
+        status.textContent = 'Revisá los campos marcados.';
+        return;
+      }
+
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.disabled = true; submitBtn.innerHTML = 'Enviando…';
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Enviando…';
+
       setTimeout(() => {
-        submitBtn.disabled = false; submitBtn.innerHTML = originalText; form.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        form.reset();
         status.classList.add('is-success');
-        status.textContent = '¡Gracias! Recibimos tu consulta y te respondemos en menos de 24 hs.';
+        status.textContent = 'Recibí tu consulta. Te respondo en menos de 24 hs.';
       }, 900);
     });
   }
 })();
-  </script>
+
+</script>
 </body>
 </html>
