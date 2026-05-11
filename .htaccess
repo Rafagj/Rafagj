@@ -1,0 +1,53 @@
+# =============================================================
+# Rafa García Juanicó — Apache config for static hosting (WNPower)
+# =============================================================
+
+# Página por defecto
+DirectoryIndex index.html
+
+# No listar archivos si no hay index
+Options -Indexes
+
+# Codificación por defecto
+AddDefaultCharset UTF-8
+
+# ---- Forzar HTTPS (activar cuando el SSL ya esté instalado) ----
+# Descomentar las 3 líneas siguientes una vez que activaste el SSL gratis
+# en cPanel (Let's Encrypt / AutoSSL):
+#
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---- Cache de assets estáticos ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html              "access plus 5 minutes"
+  ExpiresByType text/css               "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/jpeg             "access plus 30 days"
+  ExpiresByType image/png              "access plus 30 days"
+  ExpiresByType image/webp             "access plus 30 days"
+  ExpiresByType image/svg+xml          "access plus 30 days"
+  ExpiresByType font/woff2             "access plus 365 days"
+</IfModule>
+
+# ---- Compresión ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
+</IfModule>
+
+# ---- Seguridad básica ----
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ---- Bloquear archivos sensibles ----
+<FilesMatch "^\.(git|env|htaccess)$|\.md$|\.lock$">
+  Require all denied
+</FilesMatch>
+
+# ---- Páginas de error opcionales ----
+# ErrorDocument 404 /index.html
