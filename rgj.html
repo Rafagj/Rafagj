@@ -899,7 +899,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   <header class="site-header" id="top">
     <a href="#top" class="logo" aria-label="Rafa García Juanicó">
       <span class="logo__mark" aria-hidden="true">
-        <img src="assets/logo-mark.png" alt="" width="32" height="32" />
+        <picture>
+          <source type="image/webp" srcset="assets/logo-mark.webp" />
+          <img src="assets/logo-mark.png" alt="" width="32" height="32" />
+        </picture>
       </span>
       <span class="logo__name">Rafa García Juanicó</span>
     </a>
@@ -996,7 +999,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
         <aside class="about-portrait">
           <figure class="portrait">
-            <img src="assets/rafa-portrait.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()" />
+            <picture>
+              <source type="image/webp" srcset="assets/rafa-portrait-640.webp 640w, assets/rafa-portrait.webp 1024w" sizes="(max-width: 900px) 100vw, 480px" />
+              <source type="image/jpeg" srcset="assets/rafa-portrait-640.jpg 640w, assets/rafa-portrait.jpg 1024w" sizes="(max-width: 900px) 100vw, 480px" />
+              <img src="assets/rafa-portrait.jpg" alt="" loading="lazy" decoding="async" onerror="this.parentElement.parentElement.querySelectorAll('img,source').forEach(n=>n.remove())" />
+            </picture>
             <figcaption class="portrait__cap">
               <span>Rafa García Juanicó</span>
               <span class="mono">Buenos Aires, AR</span>
@@ -1247,7 +1254,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     <div class="site-footer__top">
       <div class="logo">
         <span class="logo__mark" aria-hidden="true">
-        <img src="assets/logo-mark.png" alt="" width="32" height="32" />
+        <picture>
+          <source type="image/webp" srcset="assets/logo-mark.webp" />
+          <img src="assets/logo-mark.png" alt="" width="32" height="32" />
+        </picture>
       </span>
         <span class="logo__name">Rafa García Juanicó <em>· Buenos Aires</em></span>
       </div>
