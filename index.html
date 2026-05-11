@@ -9,6 +9,15 @@
   <meta property="og:description" content="27 años creando experiencias. DJ, branding, transmisiones en vivo, creative content y tomas aéreas con dron." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_AR" />
+  <meta property="og:url" content="https://rgj.com.ar/" />
+  <meta property="og:image" content="https://rgj.com.ar/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Rafa García Juanicó — Sonido, imagen y vuelo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rafa García Juanicó — DJ · Ads · Streaming · Creative · Drone" />
+  <meta name="twitter:description" content="27 años creando experiencias. Sonido, imagen y vuelo." />
+  <meta name="twitter:image" content="https://rgj.com.ar/assets/og-image.jpg" />
   <title>Rafa García Juanicó — DJ · Creative · Drone Pilot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -335,7 +344,12 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/hola@rgj.com.ar" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nueva consulta desde rgj.com.ar" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
           <div class="field">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre" />

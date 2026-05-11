@@ -64,7 +64,7 @@
   const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
   if (form && status) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       status.className = 'form__status';
       status.textContent = '';
@@ -96,13 +96,24 @@
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Enviando…';
 
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
+      try {
+        const fd = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: fd,
+          headers: { 'Accept': 'application/json' },
+        });
+        if (!res.ok) throw new Error('Bad response: ' + res.status);
         form.reset();
         status.classList.add('is-success');
         status.textContent = 'Recibí tu consulta. Te respondo en menos de 24 hs.';
-      }, 900);
+      } catch (err) {
+        status.classList.add('is-error');
+        status.textContent = 'No pude enviar el mensaje. Escribime a hola@rgj.com.ar';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
     });
   }
 })();
