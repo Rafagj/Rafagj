@@ -518,28 +518,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   outline: none;
   grid-column: span 2;
 }
+/* 3 cards on the top row, 2 wider cards on the bottom row */
+.service-card:nth-child(n+4) { grid-column: span 3; }
 .service-card:hover,
 .service-card:focus-visible { background: var(--bg-1); }
-.service-card--feature { grid-column: span 6; background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg) 60%); }
-.service-card--feature:hover,
-.service-card--feature:focus-visible { background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg-1) 60%); }
-.service-card--feature::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(60% 80% at 100% 0%, var(--accent-soft) 0%, transparent 70%);
-  pointer-events: none;
-}
 
 @media (max-width: 1100px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .service-card { grid-column: span 1; }
-  .service-card--feature { grid-column: span 2; }
+  .service-card,
+  .service-card:nth-child(n+4) { grid-column: span 1; }
 }
 @media (max-width: 640px) {
   .services-grid { grid-template-columns: 1fr; }
   .service-card,
-  .service-card--feature { grid-column: 1; }
+  .service-card:nth-child(n+4) { grid-column: 1; }
 }
 
 .service-card__head {
@@ -570,11 +562,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--ink);
   position: relative;
 }
-.service-card--feature h3 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  letter-spacing: -0.035em;
-  font-weight: 500;
-}
 .service-card p {
   color: var(--ink-2);
   margin: 0;
@@ -583,7 +570,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   position: relative;
   max-width: 56ch;
 }
-.service-card--feature p { font-size: 1.05rem; max-width: 64ch; }
 .service-card a { color: var(--ink); border-bottom: 1px solid var(--line-2); }
 .service-card a:hover { border-bottom-color: var(--ink); }
 
@@ -1036,22 +1022,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
       </div>
 
       <div class="services-grid">
-        <article class="service-card service-card--feature" tabindex="0">
+        <article class="service-card" tabindex="0">
           <div class="service-card__head">
-            <span class="service-card__tag">DJ — Insignia</span>
+            <span class="service-card__tag">DJ</span>
             <span class="service-card__num">01 / 05</span>
           </div>
           <h3>DJ</h3>
-          <p>
-            Más de 27 años como DJ en <a href="https://instagram.com/sarapuradjs" target="_blank" rel="noopener">Sarapura</a>. Curaduría musical personalizada y lectura del ambiente para diseñar climas que se recuerdan. Cada evento es único — la música también.
-          </p>
+          <p>Más de 27 años como DJ en <a href="https://instagram.com/sarapuradjs" target="_blank" rel="noopener">Sarapura</a>. Curaduría musical y lectura del ambiente para diseñar climas que se recuerdan.</p>
           <ul>
-            <li>Eventos sociales: casamientos, cumpleaños, fiestas privadas</li>
-            <li>Eventos corporativos, lanzamientos y galas</li>
-            <li>Selección musical y ambientación a medida</li>
+            <li>Eventos sociales y privados</li>
+            <li>Corporativos y galas</li>
+            <li>Curaduría musical a medida</li>
           </ul>
           <span class="service-card__more">
-            Solicitar presupuesto
+            Saber más
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </span>
         </article>
