@@ -93,17 +93,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   letter-spacing: -0.02em;
 }
 .logo__mark {
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
   width: 30px; height: 30px;
-  border-radius: 8px;
-  background: var(--bg-1);
   color: var(--ink);
-  border: 1px solid var(--line-1);
-  transition: border-color .2s, background .2s;
+  transition: opacity .2s, transform .2s;
 }
-.logo:hover .logo__mark { border-color: var(--line-2); background: var(--bg-2); }
-.logo__mark svg { width: 18px; height: 18px; display: block; }
+.logo:hover .logo__mark { opacity: 0.85; transform: scale(0.96); }
+.logo__mark img,
+.logo__mark svg { width: 100%; height: 100%; display: block; object-fit: contain; }
 .logo__name { font-size: 0.95rem; }
 .logo__name em { font-style: normal; color: var(--ink-3); margin-left: .35rem; }
 
