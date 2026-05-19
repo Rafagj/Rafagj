@@ -15,7 +15,14 @@ CAMPAIGNS = {
         {"name": "Retargeting - Facebook", "channel": "Facebook", "format": "Carousel"},
         {"name": "Email Newsletter - Weekly", "channel": "Email", "format": "Newsletter"},
         {"name": "YouTube Pre-Roll", "channel": "YouTube", "format": "Video"},
-    ]
+    ],
+    "Sorace Mendoza": [
+        {"name": "Carrusel Recuperacion Rapida - Instagram", "channel": "Instagram", "format": "Carousel"},
+        {"name": "Carrusel Mitos vs Realidad - Facebook", "channel": "Facebook", "format": "Carousel"},
+        {"name": "Carrusel Testimonios - Instagram", "channel": "Instagram", "format": "Carousel"},
+        {"name": "Lead Gen Consulta - Meta", "channel": "Facebook", "format": "Lead Form"},
+        {"name": "Remarketing Visitas Web", "channel": "Instagram", "format": "Carousel"},
+    ],
 }
 
 DEFAULT_CAMPAIGNS = [
