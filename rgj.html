@@ -79,7 +79,11 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   letter-spacing: -0.011em;
-  overflow-x: hidden;
+  /* `clip` prevents horizontal scroll WITHOUT creating a scroll container.
+     `overflow-x: hidden` on <body> traps position:fixed elements in WebKit
+     (Safari/iOS), making the floating WhatsApp button scroll with the page
+     instead of staying put. */
+  overflow-x: clip;
 }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
