@@ -1,0 +1,174 @@
+---
+import { site } from '../data/content';
+---
+
+<section class="hero" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <img src="/gallery/fachada.svg" alt="" />
+    <div class="hero-veil"></div>
+  </div>
+
+  <div class="wrap hero-content">
+    <p class="hero-eyebrow">{site.neighborhood} · est. {site.year}</p>
+    <h1 class="hero-title">
+      Sarapura <em>house</em>
+    </h1>
+    <p class="hero-sub">{site.tagline}</p>
+
+    <div class="hero-actions">
+      <a class="btn" href="#galeria">Recorrer la casa</a>
+      <a class="btn btn--ghost hero-ghost" href="#historia">Conocer su historia</a>
+    </div>
+  </div>
+
+  <a class="hero-scroll" href="#la-casa" aria-label="Bajar">
+    <span></span>
+    <small>Scroll</small>
+  </a>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: clamp(4rem, 9vw, 8rem);
+    overflow: hidden;
+    color: var(--cream);
+  }
+
+  .hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: heroZoom 18s var(--ease) forwards;
+  }
+  @keyframes heroZoom {
+    from {
+      transform: scale(1.08);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  .hero-veil {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(20, 16, 12, 0.45) 0%, rgba(20, 16, 12, 0.1) 35%, rgba(20, 16, 12, 0.75) 100%);
+  }
+
+  .hero-content {
+    animation: heroUp 1.2s var(--ease) both;
+  }
+  @keyframes heroUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 6vw + 1rem, 8.5rem);
+    line-height: 0.92;
+    margin: 0;
+    text-shadow: 0 2px 40px rgba(0, 0, 0, 0.35);
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-family: var(--serif);
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.85rem);
+    max-width: 32ch;
+    margin: 1.4rem 0 2.4rem;
+    color: rgba(251, 248, 242, 0.92);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .btn {
+    border-color: var(--cream);
+    background: var(--cream);
+    color: var(--ink);
+  }
+  .btn:hover {
+    background: transparent;
+    color: var(--cream);
+  }
+  .hero-ghost {
+    border-color: rgba(251, 248, 242, 0.55);
+    color: var(--cream);
+    background: transparent;
+  }
+  .hero-ghost:hover {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    right: var(--gutter);
+    bottom: clamp(2rem, 5vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--cream);
+  }
+  .hero-scroll small {
+    writing-mode: vertical-rl;
+    font-size: 0.66rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+  .hero-scroll span {
+    width: 1px;
+    height: 56px;
+    background: linear-gradient(var(--gold), transparent);
+    animation: scrollPulse 2.2s var(--ease) infinite;
+    transform-origin: top;
+  }
+  @keyframes scrollPulse {
+    0%,
+    100% {
+      transform: scaleY(0.3);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-scroll {
+      display: none;
+    }
+  }
+</style>

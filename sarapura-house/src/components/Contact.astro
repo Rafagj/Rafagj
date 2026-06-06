@@ -1,0 +1,139 @@
+---
+import { site } from '../data/content';
+---
+
+<section class="section contact" id="contacto">
+  <div class="contact-media" aria-hidden="true">
+    <img src="/gallery/terraza.svg" alt="" />
+    <div class="contact-veil"></div>
+  </div>
+
+  <div class="wrap contact-inner">
+    <p class="eyebrow eyebrow--gold" data-reveal>Visitanos</p>
+    <h2 class="contact-title" data-reveal style="--delay: 80ms">
+      Conocé Sarapura house<br /> en persona
+    </h2>
+    <p class="contact-text" data-reveal style="--delay: 140ms">
+      Coordinemos un recorrido. Estaremos encantados de mostrarte cada rincón de la casa y
+      contarte su historia.
+    </p>
+
+    <div class="contact-actions" data-reveal style="--delay: 200ms">
+      <a class="btn" href={`mailto:${site.email}`}>Escribinos</a>
+      <a class="btn btn--ghost contact-ghost" href={`tel:${site.phone.replace(/\s/g, '')}`}>
+        Llamanos
+      </a>
+    </div>
+
+    <ul class="contact-list" data-reveal style="--delay: 260ms">
+      <li>
+        <span>Email</span>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </li>
+      <li>
+        <span>Teléfono</span>
+        <a href={`tel:${site.phone.replace(/\s/g, '')}`}>{site.phone}</a>
+      </li>
+      <li>
+        <span>Instagram</span>
+        <a href={site.instagram} target="_blank" rel="noopener noreferrer">@sarapura</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .contact {
+    position: relative;
+    overflow: hidden;
+    color: var(--cream);
+  }
+  .contact-media {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+  .contact-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .contact-veil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(20, 16, 12, 0.82), rgba(20, 16, 12, 0.6));
+  }
+
+  .eyebrow--gold {
+    color: var(--gold);
+  }
+  .contact-title {
+    font-size: clamp(2.2rem, 1.5rem + 3vw, 4.2rem);
+    color: var(--cream);
+  }
+  .contact-text {
+    max-width: 46ch;
+    margin: 1.5rem 0 2.5rem;
+    color: rgba(251, 248, 242, 0.85);
+    font-size: 1.1rem;
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: clamp(3rem, 6vw, 4.5rem);
+  }
+  .btn {
+    border-color: var(--cream);
+    background: var(--cream);
+    color: var(--ink);
+  }
+  .btn:hover {
+    background: transparent;
+    color: var(--cream);
+  }
+  .contact-ghost {
+    background: transparent;
+    color: var(--cream);
+    border-color: rgba(251, 248, 242, 0.5);
+  }
+  .contact-ghost:hover {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 2.5rem 0 0;
+    border-top: 1px solid rgba(251, 248, 242, 0.2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .contact-list span {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .contact-list a {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--cream);
+    transition: color 0.3s var(--ease);
+  }
+  .contact-list a:hover {
+    color: var(--gold);
+  }
+
+  @media (max-width: 700px) {
+    .contact-list {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+</style>

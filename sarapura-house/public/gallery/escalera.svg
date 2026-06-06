@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-label="Escalera imperial">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9ddc8"/>
+      <stop offset="1" stop-color="#cdb189"/>
+    </linearGradient>
+    
+  <filter id="n">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0"/>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <g stroke="#9a6b3f" stroke-width="3" fill="none" opacity="0.55" stroke-linecap="round" stroke-linejoin="round">
+    
+  <path d="M300 980 L300 200"/>
+  <path d="M300 980 h160 v-86"/><path d="M390 894 h160 v-86"/><path d="M480 808 h160 v-86"/><path d="M570 722 h160 v-86"/><path d="M660 636 h160 v-86"/><path d="M750 550 h160 v-86"/><path d="M840 464 h160 v-86"/><path d="M930 378 h160 v-86"/><path d="M1020 292 h160 v-86"/>
+  <path d="M300 200 Q900 260 1300 200" />
+  <line x1="1300" y1="200" x2="1300" y2="520"/>
+  </g>
+  <rect width="1600" height="1200" fill="transparent" filter="url(#n)"/>
+  <g opacity="0.4">
+    <rect x="40" y="40" width="1520" height="1120" fill="none" stroke="#9a6b3f" stroke-width="2"/>
+  </g>
+  <text x="800" y="1130" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#9a6b3f" opacity="0.85" font-style="italic">Escalera imperial</text>
+</svg>

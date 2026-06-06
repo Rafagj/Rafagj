@@ -1,0 +1,103 @@
+---
+import { spaces } from '../data/content';
+---
+
+<section class="section spaces" id="espacios">
+  <div class="wrap spaces-head">
+    <p class="eyebrow" data-reveal>Espacios</p>
+    <h2 class="spaces-title" data-reveal style="--delay: 80ms">
+      Cada ambiente, un capítulo
+    </h2>
+  </div>
+
+  <div class="wrap spaces-list">
+    {
+      spaces.map((space, i) => (
+        <article class={`space ${i % 2 ? 'space--flip' : ''}`}>
+          <div class="space-media" data-reveal>
+            <img src={space.image} alt={space.title} loading="lazy" />
+            <span class="space-num">{String(i + 1).padStart(2, '0')}</span>
+          </div>
+          <div class="space-body" data-reveal style="--delay: 120ms">
+            <h3>{space.title}</h3>
+            <p>{space.text}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .spaces {
+    background: var(--cream);
+  }
+  .spaces-head {
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+  }
+  .spaces-title {
+    font-size: clamp(2rem, 1.4rem + 2.6vw, 3.6rem);
+  }
+
+  .spaces-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3.5rem, 8vw, 7rem);
+  }
+
+  .space {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: center;
+  }
+  .space--flip .space-media {
+    order: 2;
+  }
+
+  .space-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--paper-2);
+  }
+  .space-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s var(--ease);
+  }
+  .space:hover .space-media img {
+    transform: scale(1.05);
+  }
+  .space-num {
+    position: absolute;
+    left: 18px;
+    top: 14px;
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    color: var(--cream);
+    mix-blend-mode: difference;
+  }
+
+  .space-body h3 {
+    font-size: clamp(1.7rem, 1.2rem + 1.8vw, 2.6rem);
+    margin-bottom: 1.2rem;
+  }
+  .space-body p {
+    color: var(--ink-soft);
+    max-width: 46ch;
+    font-size: 1.08rem;
+  }
+
+  @media (max-width: 820px) {
+    .space {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .space--flip .space-media {
+      order: 0;
+    }
+  }
+</style>

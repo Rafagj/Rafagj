@@ -1,0 +1,198 @@
+---
+import { site, nav } from '../data/content';
+---
+
+<header class="site-header" data-header>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label={`${site.name} — inicio`}>
+      <span class="brand-mark">S</span>
+      <span class="brand-name">Sarapura <em>house</em></span>
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" data-toggle>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="nav-mobile" data-mobile aria-label="Navegación móvil">
+    {nav.map((item) => <a href={item.href} data-mobile-link>{item.label}</a>)}
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 50;
+    transition: background 0.5s var(--ease), box-shadow 0.5s var(--ease), border-color 0.5s var(--ease);
+    border-bottom: 1px solid transparent;
+  }
+
+  .site-header.is-stuck {
+    background: color-mix(in srgb, var(--cream) 88%, transparent);
+    backdrop-filter: blur(14px);
+    border-bottom-color: var(--line);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--cream);
+    transition: color 0.5s var(--ease);
+  }
+
+  .is-stuck .brand {
+    color: var(--ink);
+  }
+
+  .brand-mark {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .brand-name {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand-name em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+    position: relative;
+    transition: color 0.4s var(--ease);
+  }
+
+  .is-stuck .nav a {
+    color: var(--ink-soft);
+  }
+
+  .nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.4s var(--ease);
+  }
+
+  .nav a:hover::after {
+    width: 100%;
+  }
+
+  /* Toggle */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+  }
+  .nav-toggle span {
+    width: 26px;
+    height: 2px;
+    background: var(--cream);
+    transition: transform 0.4s var(--ease), opacity 0.3s var(--ease), background 0.4s var(--ease);
+  }
+  .is-stuck .nav-toggle span {
+    background: var(--ink);
+  }
+  .nav-toggle[aria-expanded='true'] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle[aria-expanded='true'] span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle[aria-expanded='true'] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0 var(--gutter) 1.5rem;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-mobile.is-open {
+    display: flex;
+  }
+  .nav-mobile a {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+  }
+
+  @media (max-width: 880px) {
+    .nav {
+      display: none;
+    }
+    .nav-toggle {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const header = document.querySelector('[data-header]');
+  const toggle = document.querySelector('[data-toggle]');
+  const mobile = document.querySelector('[data-mobile]');
+
+  const onScroll = () => {
+    if (!header) return;
+    header.classList.toggle('is-stuck', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  toggle?.addEventListener('click', () => {
+    const open = mobile?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(!!open));
+    header?.classList.toggle('is-stuck', !!open || window.scrollY > 40);
+  });
+
+  document.querySelectorAll('[data-mobile-link]').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobile?.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

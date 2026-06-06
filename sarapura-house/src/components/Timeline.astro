@@ -1,0 +1,88 @@
+---
+import { timeline } from '../data/content';
+---
+
+<section class="section timeline" id="historia">
+  <div class="wrap">
+    <div class="timeline-head">
+      <p class="eyebrow eyebrow--light" data-reveal>Historia</p>
+      <h2 class="timeline-title" data-reveal style="--delay: 80ms">
+        Más de un siglo<br /> de historias bajo el mismo techo
+      </h2>
+    </div>
+
+    <ol class="line">
+      {
+        timeline.map((item, i) => (
+          <li class="line-item" data-reveal style={`--delay: ${i * 90}ms`}>
+            <span class="line-year">{item.year}</span>
+            <div class="line-body">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    background: var(--ink);
+    color: var(--cream);
+  }
+  .eyebrow--light {
+    color: var(--gold);
+  }
+  .timeline-head {
+    max-width: 40ch;
+    margin-bottom: clamp(3rem, 7vw, 5.5rem);
+  }
+  .timeline-title {
+    font-size: clamp(2rem, 1.4rem + 2.8vw, 3.8rem);
+    color: var(--cream);
+  }
+
+  .line {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+  .line-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(2rem, 4vw, 3rem) 0;
+    border-top: 1px solid rgba(251, 248, 242, 0.16);
+    align-items: baseline;
+  }
+  .line-item:last-child {
+    border-bottom: 1px solid rgba(251, 248, 242, 0.16);
+  }
+  .line-year {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 1.4rem + 2vw, 3.2rem);
+    color: var(--gold);
+    line-height: 1;
+  }
+  .line-body h3 {
+    font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem);
+    color: var(--cream);
+    margin-bottom: 0.7rem;
+  }
+  .line-body p {
+    color: rgba(251, 248, 242, 0.72);
+    max-width: 56ch;
+    margin: 0;
+  }
+
+  @media (max-width: 720px) {
+    .line-item {
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+  }
+</style>
