@@ -37,7 +37,7 @@ import { gallery } from '../data/content';
   <button class="lb-close" data-lb-close aria-label="Cerrar">×</button>
   <button class="lb-nav lb-prev" data-lb-prev aria-label="Anterior">‹</button>
   <figure class="lb-figure">
-    <img data-lb-img src="" alt="" />
+    <img data-lb-img alt="" />
     <figcaption data-lb-cap></figcaption>
   </figure>
   <button class="lb-nav lb-next" data-lb-next aria-label="Siguiente">›</button>
@@ -145,6 +145,9 @@ import { gallery } from '../data/content';
   }
 
   /* Lightbox */
+  .lightbox[hidden] {
+    display: none;
+  }
   .lightbox {
     position: fixed;
     inset: 0;
