@@ -15,9 +15,11 @@
   --gold: #c89a5b;
   --muted: #8a7f72;
 
-  /* Tipografía */
-  --serif: 'Cormorant Garamond', 'Hoefler Text', Garamond, 'Times New Roman', serif;
-  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Tipografía — Jost (alternativa libre/geométrica a Futura, la fuente de marca).
+     Ambas variables apuntan a Jost: --serif se usa para títulos/marca (pesos 500-700),
+     --sans para cuerpo y UI (peso 400). Fallbacks geométricos del sistema. */
+  --serif: 'Jost', 'Century Gothic', 'Futura', system-ui, sans-serif;
+  --sans: 'Jost', 'Century Gothic', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   /* Layout */
   --maxw: 1240px;

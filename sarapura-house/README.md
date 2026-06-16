@@ -43,6 +43,11 @@ Casi todo se edita desde **`src/data/content.ts`**:
 
 Los colores y tipografías están en `src/styles/global.css` (variables CSS en `:root`).
 
+**Tipografía:** la marca usa **Futura** (comercial, requiere licencia). Para evitar el
+costo/licencia, la landing usa **[Jost](https://fonts.google.com/specimen/Jost)** — una
+geométrica open-source casi idéntica a Futura, servida desde Google Fonts. Si en el futuro
+se licencia Futura, basta con self-hostearla y cambiar las variables `--serif`/`--sans`.
+
 ## Reemplazar los placeholders por fotos reales
 
 Las imágenes actuales son **SVG placeholder** generados automáticamente. Para usar fotos reales:
